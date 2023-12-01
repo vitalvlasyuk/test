@@ -49,7 +49,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/auth/password
   "email": "<string>",
   "languageCode": "<string>"
 }'```"
-"# Method Reset Password
+# Method Reset Password
 ### Reset password
 ## HTTP request
 ```code
@@ -90,7 +90,7 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/auth/password-
     "password": "<string>",
     "passwordConfirmation": "<string>"
 }'```"
-"# Method Register new user
+# Method Register new user
 ### Register new user
 ## HTTP request
 ```code
@@ -145,7 +145,7 @@ curl --location --request POST '''https://api.voicer.software/api/v1/auth/regist
   "password": "<string>",
   "passwordConfirmation": "<string>"
 }'''"
-"# Method get bot autoreply
+# Method get bot autoreply
 ### Get bot autoreply if chat is inactive based on defined conditions
 ## HTTP request
 ```code
@@ -177,7 +177,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/bots/autorep
 --header '''Content-Type: application/json''' \
 --header '''Accept: application/json'''
 ```"
-"# Method upload attachment for chat
+# Method upload attachment for chat
 ### Upload attachment and returns link to uploaded file
 ## HTTP request
 ```code
@@ -209,7 +209,7 @@ No query parameters
       "type": "string"
     },
     "attachmentType": {
-      "$ref": "#/definitions/domain.AttachmentType"
+      "$ref": #/definitions/domain.AttachmentType"
     },
     "attachmentUrl": {
       "type": "string"
@@ -225,7 +225,7 @@ curl --location --request POST '''https://api.voicer.software/api/v1/reviews/cha
 --header '''Authorization: Bearer Token''' \
 --form '''attachment=@<path_to_file>'''
 ```"
-"# Method get chat log for review
+# Method get chat log for review
 ### Get chat log for review
 ## HTTP request
 ```code 
@@ -249,7 +249,7 @@ curl --location --request POST '''https://api.voicer.software/api/v1/reviews/cha
     "log": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/dtos.ChatLogEntry"
+        "$ref": #/definitions/dtos.ChatLogEntry"
       }
     }
   }
@@ -263,7 +263,7 @@ curl --location --request GET 'https://api.voicer.software/api/v1/reviews/{id}/c
 --header 'Authorization: Bearer Token' \
 --header 'id: <id>'
 ```"
-"# Method send message to chat
+# Method send message to chat
 ### Send message to chat
 ## HTTP request
 ```code
@@ -311,7 +311,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/reviews/{id}/
     }
 }'```
 Please replace `{id}` with the actual value of the review ID you want to send a message to."
-"# Method get full chat history by review ID
+# Method get full chat history by review ID
 ### Get full chat history by clientID
 ## HTTP request
 ```code
@@ -332,7 +332,7 @@ Please replace `{id}` with the actual value of the review ID you want to send a 
     "history": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/dtos.ChatLogEntry"
+        "$ref": #/definitions/dtos.ChatLogEntry"
       }
     }
   }
@@ -344,7 +344,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/reviews/{id}
 --header '''Content-Type: application/json''' \
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token'''"
-"# Method list chat bots for a company
+# Method list chat bots for a company
 ### List chat bots for a company
 ## HTTP request
 ```code
@@ -386,7 +386,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/reviews/{id}
         "type": "string"
       },
       "type": {
-        "$ref": "#/definitions/domain.BotType"
+        "$ref": #/definitions/domain.BotType"
       },
       "updatedAt": {
         "type": "string"
@@ -402,7 +402,7 @@ curl --location --request GET 'https://api.voicer.software/api/v1/companies/{com
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token' \
 --path-variable 'company_id:<integer>'```"
-"# Method List chat templates for a company
+# Method List chat templates for a company
 ### List chat templates for a company
 ## HTTP request
 ```code
@@ -446,7 +446,7 @@ curl --location --request GET 'https://api.voicer.software/api/v1/companies/{com
 --header 'Authorization: Bearer Token'
 ```
 To replace `{company_id}` with the actual value, please provide the specific ID of the company."
-"# Method create new chat template
+# Method create new chat template
 ### Create new chat template
 ## HTTP request
 ```code
@@ -482,7 +482,7 @@ curl --location --request POST '''https://api.voicer.software/api/v1/companies/{
 }'''```"
 Error: Could not get a response from the API.
 Error: Could not get a response from the API.
-"# Method store form client
+# Method store form client
 ### Store form
 ## HTTP request
 ```code 
@@ -503,7 +503,7 @@ Error: Could not get a response from the API.
       "answers": {
         "type": "array",
         "items": {
-          "$ref": "#/definitions/client.StoreRequestAnswerData"
+          "$ref": #/definitions/client.StoreRequestAnswerData"
         }
       },
       "formID": {
@@ -548,7 +548,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/client' \
   ],
   "status": <integer>
 }'```"
-"# Method get form field
+# Method get form field
 ### Show form field
 ## HTTP request
 ```code
@@ -570,7 +570,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/client' \
     "answers": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/domain.AnswerOption"
+        "$ref": #/definitions/domain.AnswerOption"
       }
     },
     "createdAt": {
@@ -623,7 +623,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/client' \
 ```code
 curl --location --request GET 'https//api.voicer.software/api/v1/client/forms/{form_id}/fields/{field_id}' \
 --header 'Authorization: Bearer Token`'```"
-"# Method get client form by slug
+# Method get client form by slug
 ### Show form
 ## HTTP request
 ```code
@@ -647,22 +647,22 @@ curl --location --request GET 'https//api.voicer.software/api/v1/client/forms/{f
   "type": "object",
   "properties": {
     "bots": {
-      "$ref": "#/definitions/responses.ReviewBotsResponse"
+      "$ref": #/definitions/responses.ReviewBotsResponse"
     },
     "company": {
-      "$ref": "#/definitions/domain.Company"
+      "$ref": #/definitions/domain.Company"
     },
     "form": {
-      "$ref": "#/definitions/domain.Form"
+      "$ref": #/definitions/domain.Form"
     },
     "languages": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/domain.Language"
+        "$ref": #/definitions/domain.Language"
       }
     },
     "node": {
-      "$ref": "#/definitions/domain.Node"
+      "$ref": #/definitions/domain.Node"
     },
     "sessionID": {
       "type": "string"
@@ -679,7 +679,7 @@ curl --location --request GET 'https://api.voicer.software/api/v1/client/{slug}?
 Замените `<language>` на конкретное значение языка.
 Замените `<session_ID>` на конкретное значение ID сессии."
 Error: Could not get a response from the API.
-"# Method create company
+# Method create company
 ### Create company
 ## HTTP request
 ```code
@@ -716,7 +716,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/companies' \
     "enableOverdue": <boolean>
   }
 }'```"
-"# Method get company info by id
+# Method get company info by id
 ### Show company
 ## HTTP request
 ```code
@@ -762,7 +762,7 @@ curl --location --request GET 'https://api.voicer.software/api/v1/companies/{id}
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json'
 ```"
-"# Method PUT Update Company
+# Method PUT Update Company
 ### Update company
 ## HTTP request
 ```code
@@ -822,7 +822,7 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/companies/{i
   '''name''': '''<string>'''
 }'''
 ```"
-"# Method delete company id
+# Method delete company id
 ### Delete company
 ## HTTP request
 ```code
@@ -852,7 +852,7 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/companies/{i
 curl --location --request DELETE '''https://api.voicer.software/api/v1/companies/{id}''' \
 --header '''Authorization: Bearer Token`''' \
 --header '''Accept: application/json'''```"
-"# Method GET List all users attached to a company
+# Method GET List all users attached to a company
 ### List all users attached to a company
 ## HTTP request
 ```code
@@ -914,7 +914,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/companies/{i
     "offset": <integer>
 }'''
 ```"
-"# Method get company languages
+# Method get company languages
 ### Show company languages
 ## HTTP request
 ```code
@@ -956,7 +956,7 @@ curl --location --request GET 'https://api.voicer.software/api/v1/companies/{id}
 ```"
 Error: Could not get a response from the API.
 Error: Could not get a response from the API.
-"# Method create contact
+# Method create contact
 ### Create contact
 ## HTTP request
 ```code
@@ -1034,7 +1034,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/contacts' \
     "whatsappID": "<string>"
   }
 }'```"
-"# Method Store chat in cache
+# Method Store chat in cache
 ### Store chat in cache
 ## HTTP request
 ```code
@@ -1074,7 +1074,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/contacts/chat
   "type": "<string>",
   "uid": "<string>"
 }'```"
-"# Method get Contact info by id
+# Method get Contact info by id
 ### Show contact
 ## HTTP request
 ```code
@@ -1133,7 +1133,7 @@ curl --location --request GET 'https://api.voicer.software/api/v1/contacts/{id}'
 --header 'Authorization: Bearer Token'```
 
 Please note that you need to replace `{id}` with the actual ID value of the contact you want to retrieve."
-"# Method Update contact
+# Method Update contact
 ### Update contact
 ## HTTP request
 ```code
@@ -1182,7 +1182,7 @@ curl--location --request PUT 'https://api.voicer.software/api/v1/contacts/{id}' 
   "whatsappID": "<string>"
 }'```"
 Error: Could not get a response from the API.
-"# Method get all contacts by review id
+# Method get all contacts by review id
 ### List all contacts
 ## HTTP request
 ```code
@@ -1243,7 +1243,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/reviews/{id}
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token'''
 ```"
-"# Method get Node count
+# Method get Node count
 ### Show nodes count, according to the filter
 ## HTTP request
 ```code
@@ -1269,7 +1269,7 @@ curl --location --request GET 'https://api.voicer.software/api/v1/counts/node?co
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer Token'
 ```"
-"# Method get reviews count
+# Method get reviews count
 ### Show reviews count, according to the filter
 ## HTTP request
 ```code
@@ -1309,7 +1309,7 @@ curl --location --request GET 'https://api.voicer.software/api/v1/counts/review'
 }'```
 Replace `[array_of_company_ids]`, `[array_of_node_ids]`, `[array_of_source_ids]`, `[array_of_client_statuses]`, `from_date_in_RFC3339_format`, and `to_date_in_RFC3339_format` with the actual values you want to use."
 Error: Could not get a response from the API.
-"# Method List all documents
+# Method List all documents
 ### List all documents
 ## HTTP request
 ```code
@@ -1362,7 +1362,7 @@ curl --location --request GET 'https://api.voicer.software/api/v1/companies/{id}
 --header 'Authorization: Bearer Token' \
 --header 'id: <integer>'
 ```"
-"# Method create document
+# Method create document
 ### Create document
 ## HTTP request
 ```code
@@ -1427,7 +1427,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/documents' \
   "name": "<string>",
   "url": "<string>"
 }'```"
-"# Method get document by id
+# Method get document by id
 ### Show document
 ## HTTP request
 ```code
@@ -1476,7 +1476,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/documents/{i
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token'''
 ```"
-"# Method Update document by id
+# Method Update document by id
 ### Update document
 ## HTTP request
 ```code
@@ -1529,7 +1529,7 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/documents/{i
   "name": "<string>",
   "url": "<string>"
 }'''```"
-"# Method delete document id
+# Method delete document id
 ### Delete document
 ## HTTP request
 ```code
@@ -1560,7 +1560,7 @@ curl --location --request DELETE '''https://api.voicer.software/api/v1/documents
 --header '''Content-Type: application/json''' \
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token'''```"
-"# Method GET email templates
+# Method GET email templates
 ### List email-templates
 ## HTTP request
 ```code
@@ -1615,7 +1615,7 @@ curl --location --request DELETE '''https://api.voicer.software/api/v1/documents
 ```code
 curl --location --request GET '''https://api.voicer.software/api/v1/email-templates?limit=<integer>&offset=<integer>''' \
 --header '''Authorization: Bearer Token'''```"
-"# Method create new email-template
+# Method create new email-template
 ### Create new email-template
 ## HTTP request
 ```code
@@ -1655,7 +1655,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/email-templat
     "subject": "<string>",
     "variables": ["<string1>", "<string2>"]
 }'```"
-"# Method find EmailTemplate by ID
+# Method find EmailTemplate by ID
 ### Find email-template by id
 ## HTTP request
 ```code
@@ -1707,7 +1707,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/email-templa
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token'''
 ```"
-"# Method update email-template
+# Method update email-template
 ### Update email-template
 ## HTTP request
 ```code
@@ -1752,7 +1752,7 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/email-template
   "subject": "<string>",
   "variables": ["<string>", "<string>"]
 }'```"
-"# Method Delete Email Template by ID
+# Method Delete Email Template by ID
 ### Delete email-template
 ## HTTP request
 ```code
@@ -1783,7 +1783,7 @@ curl --location --request DELETE '''https://api.voicer.software/api/v1/email-tem
 --header '''Content-Type: application/json''' \
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token'''```"
-"# Method get forms for company
+# Method get forms for company
 ### Show forms for company
 ## HTTP request
 ```code
@@ -1818,7 +1818,7 @@ curl --location --request DELETE '''https://api.voicer.software/api/v1/email-tem
       "fields": {
         "type": "array",
         "items": {
-          "$ref": "#/definitions/domain.FormField"
+          "$ref": #/definitions/domain.FormField"
         }
       },
       "id": {
@@ -1881,7 +1881,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/companies/{i
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token'''
 ```"
-"# Method Store form
+# Method Store form
 ### Store form
 ## HTTP request
 ```code
@@ -1906,12 +1906,12 @@ curl --location --request GET '''https://api.voicer.software/api/v1/companies/{i
     "fieldID": <integer>,
     "options": [
       {
-        "$ref": "#/definitions/form.StoreRequestOption"
+        "$ref": #/definitions/form.StoreRequestOption"
       }
     ],
     "styles": [
       {
-        "$ref": "#/definitions/form.StoreRequestOption"
+        "$ref": #/definitions/form.StoreRequestOption"
       }
     ]
   }
@@ -1939,7 +1939,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/companies/{i
     "fields": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/domain.FormField"
+        "$ref": #/definitions/domain.FormField"
       }
     },
     "id": {
@@ -2015,17 +2015,17 @@ curl --location --request POST 'https://api.voicer.software/api/v1/forms' \
     "fieldID": <integer>,
     "options": [
       {
-        "$ref": "#/definitions/form.StoreRequestOption"
+        "$ref": #/definitions/form.StoreRequestOption"
       }
     ],
     "styles": [
       {
-        "$ref": "#/definitions/form.StoreRequestOption"
+        "$ref": #/definitions/form.StoreRequestOption"
       }
     ]
   }
 }'```"
-"# Method get Form id
+# Method get Form id
 ### Show form
 ## HTTP request
 ```code
@@ -2058,7 +2058,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/forms' \
     "fields": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/domain.FormField"
+        "$ref": #/definitions/domain.FormField"
       }
     },
     "id": {
@@ -2116,7 +2116,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/forms/{id}''
   "id": <integer>
 }
 '''```"
-"# Method Update form
+# Method Update form
 ### Update form
 ### HTTP request
 ```code
@@ -2184,7 +2184,7 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/forms/{id}' \
   }
 }'
 ```"
-"# Method delete Form by id
+# Method delete Form by id
 ### Delete form
 ## HTTP request
 ```code
@@ -2216,7 +2216,7 @@ curl --location --request DELETE '''https://api.voicer.software/api/v1/forms/{id
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token'''```"
 Error: Could not get a response from the API.
-"# Method Store form_field
+# Method Store form_field
 ### Store form_field
 ## HTTP request
 ```code
@@ -2263,7 +2263,7 @@ Error: Could not get a response from the API.
     "answers": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/domain.AnswerOption"
+        "$ref": #/definitions/domain.AnswerOption"
       }
     },
     "createdAt": {
@@ -2344,7 +2344,7 @@ curl --location --request POST '''https://api.voicer.software/api/v1/form_fields
         ]
       }
     }'''"
-"# Method get Form Field by id
+# Method get Form Field by id
 ### Show form_field
 ## HTTP request
 ```code
@@ -2365,7 +2365,7 @@ curl --location --request POST '''https://api.voicer.software/api/v1/form_fields
     "answers": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/domain.AnswerOption"
+        "$ref": #/definitions/domain.AnswerOption"
       }
     },
     "createdAt": {
@@ -2425,7 +2425,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/form_fields/
   "id": <integer>
 }'''
 ```"
-"# Method update form_field
+# Method update form_field
 ### Update form_field
 ## HTTP request
 ```code
@@ -2479,7 +2479,7 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/form_fields/
 '''
 ```
 Replace `Token` with the actual bearer token value and `{id}` with the actual ID value. Replace `<array_of_answers>`, `<integer>`, `<array_of_options>`, `<string>`, and `<array_of_styles>` with the actual values for the respective fields."
-"# Method delete form_field by id
+# Method delete form_field by id
 ### Delete form_field
 ## HTTP request
 ```code
@@ -2510,7 +2510,7 @@ curl --location --request DELETE '''https://api.voicer.software/api/v1/form_fiel
 --header '''Content-Type: application/json''' \
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token'''```"
-"# Method get fields for form id
+# Method get fields for form id
 ### Show fields for form
 ## HTTP request
 ```code
@@ -2533,7 +2533,7 @@ curl --location --request DELETE '''https://api.voicer.software/api/v1/form_fiel
       "answers": {
         "type": "array",
         "items": {
-          "$ref": "#/definitions/domain.AnswerOption"
+          "$ref": #/definitions/domain.AnswerOption"
         }
       },
       "createdAt": {
@@ -2594,7 +2594,7 @@ curl --location --request GET 'https://api.voicer.software/api/v1/forms/{id}/fie
 Error: Could not get a response from the API.
 Error: Could not get a response from the API.
 Error: Could not get a response from the API.
-"# Method update group
+# Method update group
 ### Update group
 ## HTTP request
 ```code
@@ -2638,7 +2638,7 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/groups/{id}' \
 --data-raw '{
   "name": "<string>"
 }'```"
-"# Method delete group
+# Method delete group
 ### Delete group
 ## HTTP request
 ```code
@@ -2674,7 +2674,7 @@ curl --location --request DELETE '''https://api.voicer.software/api/v1/groups/{i
 Remember to replace `{id}` with the actual group identifier."
 Error: Could not get a response from the API.
 Error: Could not get a response from the API.
-"# Method add node subtree view to group
+# Method add node subtree view to group
 ### Add node subtree view to group
 ## HTTP request
 ```code
@@ -2709,7 +2709,7 @@ curl --location --request POST '''https://api.voicer.software/api/v1/groups/{id}
 --data '''{}'''
 ```
 "
-"# Method delete node from group
+# Method delete node from group
 ### Remove node subtree view from group
 ## HTTP request
 ```code
@@ -2742,7 +2742,7 @@ curl --location --request DELETE 'https://api.voicer.software/api/v1/groups/{id}
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token'```"
 Error: Could not get a response from the API.
-"# Method Remove user from group
+# Method Remove user from group
 ### Remove user from group
 ## HTTP request
 ```code
@@ -2774,7 +2774,7 @@ curl --location --request DELETE '''https://api.voicer.software/api/v1/groups/{i
 --header '''Content-Type: application/json''' \
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token'''```"
-"# Method healthChecks
+# Method healthChecks
 ### healthChecks
 ## HTTP request
 ```code
@@ -2801,7 +2801,7 @@ curl --location --request GET 'https://api.voicer.software/api/v1/health_checks'
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token'```"
-"# Method get languages
+# Method get languages
 ### List languages
 ## HTTP request
 ```code
@@ -2834,7 +2834,7 @@ curl --location --request GET 'https://api.voicer.software/api/v1/health_checks'
 curl --location --request GET 'https://api.voicer.software/api/v1/languages' \
 --header 'Authorization: Bearer Token'```"
 Error: Could not get a response from the API.
-"# Method delete language
+# Method delete language
 ### Delete language
 ## HTTP request
 ```code
@@ -2870,7 +2870,7 @@ curl --location --request DELETE 'https://api.voicer.software/api/v1/languages' 
 --data '{
     "name": "<string>"
 }'```"
-"# Method Create Metadata
+# Method Create Metadata
 ### Create metadata
 ## HTTP request
 ```code
@@ -2935,7 +2935,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/metadata/{ent
   "entity": "<string>"
 }'```
 Replace `<string>` with the actual values and `<integer>` with the actual integer value."
-"# Method get entity metadata by ID
+# Method get entity metadata by ID
 ### Show metadata
 ## HTTP request
 ```code
@@ -2982,7 +2982,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/metadata/{en
 --header '''Content-Type: application/json''' \
 --header '''Accept: application/json''' \
 ```"
-"# Method Update metadata
+# Method Update metadata
 ### Update metadata
 ## HTTP request
 ```code 
@@ -3028,7 +3028,7 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/metadata/{enti
     }
 }'
 ```"
-"# Method delete metadata by entity and id
+# Method delete metadata by entity and id
 ### Delete metadata
 ## HTTP request
 ```code
@@ -3066,7 +3066,7 @@ curl --location --request DELETE '''https://api.voicer.software/api/v1/metadata/
 --header '''id: <integer>''' \
 '''{
 }'''"
-"# Method get entity metadata by ID
+# Method get entity metadata by ID
 ### Show entity metadata by ID
 ## HTTP request
 ```code
@@ -3116,7 +3116,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/{entity}/{id
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token'''
 ```"
-"# Method get nodes by company ID
+# Method get nodes by company ID
 ### Show nodes by company ID
 ## HTTP request
 ```code
@@ -3139,7 +3139,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/{entity}/{id
       "children": {
         "type": "array",
         "items": {
-          "$ref": "#/definitions/domain.Node"
+          "$ref": #/definitions/domain.Node"
         }
       },
       "code": {
@@ -3160,7 +3160,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/{entity}/{id
       "metadata": {
         "type": "array",
         "items": {
-          "$ref": "#/definitions/domain.Metadata"
+          "$ref": #/definitions/domain.Metadata"
         }
       },
       "name": {
@@ -3199,7 +3199,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/companies/{i
 --header '''Authorization: Bearer Token''' \
 --data '{}'''
 ```"
-"# Method create node
+# Method create node
 ### Create node
 ## HTTP request
 ```code
@@ -3246,7 +3246,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/nodes' \
     "useDetectLanguage": true
   }
 }'```"
-"# Method get Node by id
+# Method get Node by id
 ### Show node
 ## HTTP request
 ```code
@@ -3267,7 +3267,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/nodes' \
     "children": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/domain.Node"
+        "$ref": #/definitions/domain.Node"
       }
     },
     "code": {
@@ -3288,7 +3288,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/nodes' \
     "metadata": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/domain.Metadata"
+        "$ref": #/definitions/domain.Metadata"
       }
     },
     "name": {
@@ -3325,7 +3325,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/nodes/{id}''
 --header '''Authorization: Bearer Token''' \
 --header '''Accept: application/json'''
 ```"
-"# Method update Node
+# Method update Node
 ### Update node
 ## HTTP request
 ```code
@@ -3376,7 +3376,7 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/nodes/{id}''
   '''sourceID''': '''<integer>''',
   '''useDetectLanguage''': '''<boolean>'''
 }'''```"
-"# Method delete Node id
+# Method delete Node id
 ### Delete node
 ## HTTP request
 ```code
@@ -3410,7 +3410,7 @@ curl --location --request DELETE '''https://api.voicer.software/api/v1/nodes/{id
 --data '''{
   '''id''': '''<integer>'''
 }'''"
-"# Method GET: Show node with metadata
+# Method GET: Show node with metadata
 Description: Show node with metadata
 ## HTTP request
 ```code 
@@ -3434,7 +3434,7 @@ Accept: application/json
     "children": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/domain.Node"
+        "$ref": #/definitions/domain.Node"
       }
     },
     "code": {
@@ -3455,7 +3455,7 @@ Accept: application/json
     "metadata": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/domain.Metadata"
+        "$ref": #/definitions/domain.Metadata"
       }
     },
     "name": {
@@ -3492,7 +3492,7 @@ curl --location --request GET 'https//api.voicer.software/api/v1/nodes/{id}/full
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token`'
 ```"
-"# Method Update Node Responsible
+# Method Update Node Responsible
 ### Update node responsible.
 There are two levels of responsible distribution: one (default) and all.
 type=one - responsible user is set only on the given node.
@@ -3545,7 +3545,7 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/nodes/{id}/r
 --header '''Authorization: Bearer Token''' \
 --data '''{\n  '''responsibleID''': <integer>,\n  '''type''': '''<string>'''\n}'''
 ```"
-"# Method Query Reviews
+# Method Query Reviews
 ### Query reviews
 ## HTTP request
 ```code
@@ -3574,7 +3574,7 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/nodes/{id}/r
       "answers": {
         "type": "array",
         "items": {
-          "$ref": "#/definitions/domain.ClientAnswer"
+          "$ref": #/definitions/domain.ClientAnswer"
         }
       },
       "comment": {
@@ -3593,7 +3593,7 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/nodes/{id}/r
         "type": "string"
       },
       "status": {
-        "$ref": "#/definitions/domain.ClientStatus"
+        "$ref": #/definitions/domain.ClientStatus"
       },
       "ticket_number": {
         "type": "integer"
@@ -3601,7 +3601,7 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/nodes/{id}/r
       "timestamps": {
         "type": "array",
         "items": {
-          "$ref": "#/definitions/domain.Timestamp"
+          "$ref": #/definitions/domain.Timestamp"
         }
       },
       "updated_at": {
@@ -3630,7 +3630,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/reviews''' \
   "to": <string>
 }'''
 ```"
-"# Method POST reviews
+# Method POST reviews
 ### Get reviews list by filter
 ## HTTP request
 ```code 
@@ -3652,7 +3652,7 @@ Content-Type: application/json
     "contacts": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/domain.ContactType"
+        "$ref": #/definitions/domain.ContactType"
       }
     },
     "forms": {
@@ -3679,7 +3679,7 @@ Content-Type: application/json
     "statuses": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/domain.ClientStatus"
+        "$ref": #/definitions/domain.ClientStatus"
       }
     },
     "to": {
@@ -3699,7 +3699,7 @@ Content-Type: application/json
       "answers": {
         "type": "array",
         "items": {
-          "$ref": "#/definitions/domain.ClientAnswer"
+          "$ref": #/definitions/domain.ClientAnswer"
         }
       },
       "comment": {
@@ -3708,19 +3708,19 @@ Content-Type: application/json
       "contact": {
         "type": "array",
         "items": {
-          "$ref": "#/definitions/domain.ClientContact"
+          "$ref": #/definitions/domain.ClientContact"
         }
       },
       "created_at": {
         "type": "string"
       },
       "form": {
-        "$ref": "#/definitions/domain.Form"
+        "$ref": #/definitions/domain.Form"
       },
       "formFields": {
         "type": "array",
         "items": {
-          "$ref": "#/definitions/domain.FormField"
+          "$ref": #/definitions/domain.FormField"
         }
       },
       "formID": {
@@ -3733,7 +3733,7 @@ Content-Type: application/json
         "description": "Joined",
         "allOf": [
           {
-            "$ref": "#/definitions/domain.Node"
+            "$ref": #/definitions/domain.Node"
           }
         ]
       },
@@ -3741,10 +3741,10 @@ Content-Type: application/json
         "type": "string"
       },
       "source": {
-        "$ref": "#/definitions/domain.Source"
+        "$ref": #/definitions/domain.Source"
       },
       "status": {
-        "$ref": "#/definitions/domain.ClientStatus"
+        "$ref": #/definitions/domain.ClientStatus"
       },
       "ticket_number": {
         "type": "integer"
@@ -3752,7 +3752,7 @@ Content-Type: application/json
       "timestamps": {
         "type": "array",
         "items": {
-          "$ref": "#/definitions/domain.Timestamp"
+          "$ref": #/definitions/domain.Timestamp"
         }
       },
       "updated_at": {
@@ -3782,7 +3782,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/reviews' \
     "to": "<string>"
 }'```"
 Error: Could not get a response from the API.
-"# Method get Review by id
+# Method get Review by id
 ### Show review
 ## HTTP request
 ```code
@@ -3803,7 +3803,7 @@ Error: Could not get a response from the API.
     "answers": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/domain.ClientAnswer"
+        "$ref": #/definitions/domain.ClientAnswer"
       }
     },
     "comment": {
@@ -3822,7 +3822,7 @@ Error: Could not get a response from the API.
       "type": "string"
     },
     "status": {
-      "$ref": "#/definitions/domain.ClientStatus"
+      "$ref": #/definitions/domain.ClientStatus"
     },
     "ticket_number": {
       "type": "integer"
@@ -3830,7 +3830,7 @@ Error: Could not get a response from the API.
     "timestamps": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/domain.Timestamp"
+        "$ref": #/definitions/domain.Timestamp"
       }
     },
     "updated_at": {
@@ -3849,7 +3849,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/reviews/{id}
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token'''"
 Error: Could not get a response from the API.
-"# Method send SMS without timezone
+# Method send SMS without timezone
 ### Send SMS without timezone
 ## HTTP request
 ```code
@@ -3888,7 +3888,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/sms' \
   "data": "<string>",
   "phone": "<string>"
 }'"
-"# Method send bulk SMS
+# Method send bulk SMS
 ### Send SMS without timezone to many
 ## HTTP request
 ```code
@@ -3931,7 +3931,7 @@ curl --location --request POST '''https://api.voicer.software/api/v1/sms/bulk'''
     "phones": ["<phone_number1>", "<phone_number2>"]
   }
 }'''```"
-"# Method get sources by company id
+# Method get sources by company id
 ### Get sources by company id
 ## HTTP request
 ```code
@@ -3974,7 +3974,7 @@ curl --location --request GET 'https://api.voicer.software/api/v1/companies/{com
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json'```
 Please note that you need to replace `{company_id}` with the actual company ID that you want to retrieve sources for."
-"# Method create Source
+# Method create Source
 ### Create source
 ## HTTP request
 ```code
@@ -4027,7 +4027,7 @@ curl --location --request POST '''https://api.voicer.software/api/v1/sources''' 
     "name": "<string>"
   }
 }'''"
-"# Method get Source by id
+# Method get Source by id
 ### Find source
 ## HTTP request
 ```code
@@ -4070,7 +4070,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/sources/{id}
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token'''
 ```"
-"# Method Update Source
+# Method Update Source
 ### Update source
 ## HTTP request
 ```code
@@ -4131,7 +4131,7 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/sources/{id}
   '''companyID''': <integer>,
   '''name''': '''<string>'''
 }'''"
-"# Method Delete Source
+# Method Delete Source
 ### Delete source
 ## HTTP request
 ```code
@@ -4173,7 +4173,7 @@ curl --location --request DELETE 'https://api.voicer.software/api/v1/sources/{id
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token'```"
-"# Method get all ticket statuses for company id
+# Method get all ticket statuses for company id
 ### List all companies
 ## HTTP request
 ```code
@@ -4221,7 +4221,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/companies/{i
 --data '''{
   "id": <integer>
 }'''```"
-"# Method create ticket
+# Method create ticket
 ### Create ticket
 ## HTTP request
 ```code
@@ -4294,7 +4294,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/companies/{id
     "type_id": 0
   }
 }'```"
-"# Method get companies ticket types
+# Method get companies ticket types
 ### List all companies
 ## HTTP request
 ```code
@@ -4345,7 +4345,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/companies/{i
 --header '''id: <integer>'''
 ```"
 Error: Could not get a response from the API.
-"# Method get company tickets
+# Method get company tickets
 ### List all companies
 ## HTTP request
 ```code
@@ -4384,7 +4384,7 @@ Error: Could not get a response from the API.
         "type": "integer"
       },
       "priority": {
-        "$ref": "#/definitions/domain.PriorityType"
+        "$ref": #/definitions/domain.PriorityType"
       },
       "responsible_id": {
         "type": "integer"
@@ -4415,7 +4415,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/companies/{i
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token'''
 ```"
-"# Method create ticket
+# Method create ticket
 ### Create ticket
 ## HTTP request
 ```code
@@ -4468,7 +4468,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/companies/{i
       "type": "integer"
     },
     "priority": {
-      "$ref": "#/definitions/domain.PriorityType"
+      "$ref": #/definitions/domain.PriorityType"
     },
     "responsible_id": {
       "type": "integer"
@@ -4511,7 +4511,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/companies/{id
   "id": <integer>
 }'```"
 Error: Could not get a response from the API.
-"# Method get ticket status by id
+# Method get ticket status by id
 ### Show ticket
 ## HTTP request
 ```code
@@ -4555,7 +4555,7 @@ curl --location --request GET 'https://api.voicer.software/api/v1/ticket_statuse
 --header 'Authorization: Bearer Token'
 ```
 Replace `{id}` with the actual value of the ticket status ID you want to retrieve."
-"# Method Update ticket
+# Method Update ticket
 ### Update ticket
 ## HTTP request
 ```code
@@ -4613,7 +4613,7 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/ticket_statuse
   "status_id": <integer>,
   "type_id": <integer>
 }'```"
-"# Method delete ticket status id
+# Method delete ticket status id
 ### Delete ticket
 ## HTTP request
 ```code
@@ -4644,7 +4644,7 @@ curl --location --request DELETE 'https://api.voicer.software/api/v1/ticket_stat
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token'```"
-"# Method get ticket type by id
+# Method get ticket type by id
 ### Show ticket
 ## HTTP request
 ```code
@@ -4689,7 +4689,7 @@ curl --location --request GET 'https://api.voicer.software/api/v1/ticket_types/{
 --header 'Authorization: Bearer Token' \
 --header 'Accept: application/json'
 ```"
-"# Method update ticket type
+# Method update ticket type
 ### Update ticket
 ## HTTP request
 ```code
@@ -4744,7 +4744,7 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/ticket_types/{
 }'
 ```
 Replace `{id}`, `<string>`, and `<integer>` with the actual values for your request."
-"# Method Delete ticket
+# Method Delete ticket
 ### Delete ticket
 ## HTTP request
 ```code
@@ -4777,7 +4777,7 @@ curl --location --request DELETE 'https://api.voicer.software/api/v1/ticket_type
 --data-raw ''
 ```
 Please note that you need to replace `{id}` with the actual value of the ticket type ID you want to delete."
-"# Method get Ticket ID
+# Method get Ticket ID
 ### Show ticket
 ## HTTP request
 ```code
@@ -4813,7 +4813,7 @@ Please note that you need to replace `{id}` with the actual value of the ticket 
       "type": "integer"
     },
     "priority": {
-      "$ref": "#/definitions/domain.PriorityType"
+      "$ref": #/definitions/domain.PriorityType"
     },
     "responsible_id": {
       "type": "integer"
@@ -4840,7 +4840,7 @@ Please note that you need to replace `{id}` with the actual value of the ticket 
 ```code
 curl --location --request GET 'https://api.voicer.software/api/v1/tickets/{id}' \
 --header 'Authorization: Bearer Token`'```"
-"# Method Update Ticket
+# Method Update Ticket
 ### Update ticket
 ## HTTP request
 ```code
@@ -4895,7 +4895,7 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/tickets/{id}' 
   "type_id": <integer>
 }'```"
 Error: Could not get a response from the API.
-"## Method List user contacts
+## Method List user contacts
 ### List user contacts.
 Query params can be used to find a specific subset of contacts.
 ## HTTP request
@@ -4954,7 +4954,7 @@ curl --location --request GET 'https://api.voicer.software/api/v1/user_contacts?
 --header 'Authorization: Bearer <token>'
 ```
 Replace `<user_email>` with the email of the user you want to search for contacts, `<chat_id>` with the desired chat ID, `<user_id>` with the user ID you want to search for contacts, and `<token>` with the actual token value."
-"# Method store user contact
+# Method store user contact
 ### Store user contact
 ## HTTP request
 ```code
@@ -4993,7 +4993,7 @@ curl--location --request POST 'https://api.voicer.software/api/v1/user_contacts'
         "userID": <integer>
     }
 }'```"
-"# Method update user contact
+# Method update user contact
 ### Update user contact
 ## HTTP request
 ```code
@@ -5039,7 +5039,7 @@ curl --location --request PUT [url: https://api.voicer.software/api/v1/user_cont
   "active": true,
   "email": "<string>"
 }'```"
-"# Method delete user contact by id
+# Method delete user contact by id
 ### Delete user contact
 ## HTTP request
 ```code
@@ -5075,7 +5075,7 @@ curl --location --request DELETE '''https://api.voicer.software/api/v1/user_cont
 }'''"
 Error: Could not get a response from the API.
 Error: Could not get a response from the API.
-"# Method store user notification
+# Method store user notification
 ### Store user notification
 ## HTTP request
 ```code
@@ -5109,7 +5109,7 @@ curl --location --request POST '''https://api.voicer.software/api/v1/user_notifi
 ```"
 Error: Could not get a response from the API.
 Error: Could not get a response from the API.
-"# Method List Users
+# Method List Users
 ### List users filtered by provided query
 ## HTTP request
 ```code
@@ -5139,7 +5139,7 @@ Error: Could not get a response from the API.
     "data": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/domain.User"
+        "$ref": #/definitions/domain.User"
       }
     }
   }
@@ -5152,7 +5152,7 @@ curl --location --request GET 'https://api.voicer.software/api/v1/users?name=<na
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json'```"
 Error: Could not get a response from the API.
-"# Method Update User
+# Method Update User
 ### Update user
 ## HTTP request
 ```code
@@ -5200,7 +5200,7 @@ curl -X PUT \
      }' \
      "https://api.voicer.software/api/v1/users/{id}"
 ```"
-"# Method DELETE user id
+# Method DELETE user id
 ### Delete user
 ## HTTP request
 ```code
@@ -5234,7 +5234,7 @@ curl --location --request DELETE 'https://api.voicer.software/api/v1/users/{id}'
 ```
 Please replace `{id}` with the actual user ID."
 Error: Could not get a response from the API.
-"# Method Attach notifiable source to a user
+# Method Attach notifiable source to a user
 ### Attach notifiable source to a user
 ## HTTP request
 ```code
@@ -5271,7 +5271,7 @@ curl --location --request POST '''https://api.voicer.software/api/v1/users/{user
   "notifyTimeEnd": "<HH:MM:SS>"
 }''' 
 ```"
-"# Method delete Detach Notifiable Source from User
+# Method delete Detach Notifiable Source from User
 ### Detach notifiable source from a user
 ## HTTP request
 ```code
@@ -5303,7 +5303,7 @@ curl --location --request DELETE 'https://api.voicer.software/api/v1/users/{user
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token'```"
-"# Method get user settings
+# Method get user settings
 ### Show user settings for a specific user
 ## HTTP request
 ```code
@@ -5352,7 +5352,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/users/{user_
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token'''
 ```"
-"# Method update user settings
+# Method update user settings
 ### Update user settings
 ## HTTP request
 ```code
@@ -5417,7 +5417,7 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/users/{id}/set
     "workTimeBegin": "<string>",
     "workTimeEnd": "<string>"
 }'```"
-"# Method Send Viber without timezone
+# Method Send Viber without timezone
 ### Send Viber message without specifying a timezone
 ## HTTP request
 ```code
@@ -5457,7 +5457,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/viber' \
   "data": "<string>",
   "phone": "<string>"
 }'```"
-"# Method Send Viber to many
+# Method Send Viber to many
 ### Send Viber to many
 ## HTTP request
 ```code
@@ -5499,7 +5499,7 @@ curl --location --request POST '''https://api.voicer.software/api/v1/viber/bulk'
     "phones": ["<string>", "<string>", ...]
   }
 }'''"
-"# Method GET user view
+# Method GET user view
 ### Get all companies and nodes attached to provided user
 ## HTTP request
 ```code
@@ -5526,7 +5526,7 @@ curl --location --request POST '''https://api.voicer.software/api/v1/viber/bulk'
     "structures": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/dtos.ViewStructure"
+        "$ref": #/definitions/dtos.ViewStructure"
       }
     }
   }
@@ -5538,7 +5538,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/view/user/{i
 --header '''Content-Type: application/json''' \
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token'''"
-"# Method PUT to detach and attach companies and nodes to provided user
+# Method PUT to detach and attach companies and nodes to provided user
 ### Detach and attach companies and nodes to provided user
 ##### Important! It works in detach-first attach-second order
 ## HTTP request
@@ -5596,7 +5596,7 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/view/user/{i
   "updateType": "domain.ViewUpdateType"
 }'''
 ```"
-"# Method Attach companies and nodes to user id
+# Method Attach companies and nodes to user id
 ### Attach companies and nodes to provided user
 ## HTTP request
 ```code
