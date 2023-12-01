@@ -9,18 +9,18 @@
 ## Request body
 ```json
 {
-  ""data"": {
-    ""description"": ""forgot password data"",
-    ""name"": ""data"",
-    ""in"": ""body"",
-    ""required"": true,
-    ""type"": ""object"",
-    ""properties"": {
-      ""email"": {
-        ""type"": ""string""
+  "data": {
+    "description": "forgot password data",
+    "name": "data",
+    "in": "body",
+    "required": true,
+    "type": "object",
+    "properties": {
+      "email": {
+        "type": "string"
       },
-      ""languageCode"": {
-        ""type"": ""string""
+      "languageCode": {
+        "type": "string"
       }
     }
   }
@@ -29,12 +29,12 @@
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""OK"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "OK",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -46,8 +46,8 @@ curl --location --request POST 'https://api.voicer.software/api/v1/auth/password
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token`' \
 --data '{
-  ""email"": ""<string>"",
-  ""languageCode"": ""<string>""
+  "email": "<string>",
+  "languageCode": "<string>"
 }'```"
 "# Method Reset Password
 ### Reset password
@@ -64,19 +64,19 @@ curl --location --request POST 'https://api.voicer.software/api/v1/auth/password
 ## Request body
 ```json
 {
-  ""password"": ""<string>"",
-  ""passwordConfirmation"": ""<string>""
+  "password": "<string>",
+  "passwordConfirmation": "<string>"
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Password changed"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "Password changed",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -87,8 +87,8 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/auth/password-
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --data-raw '{
-    ""password"": ""<string>"",
-    ""passwordConfirmation"": ""<string>""
+    "password": "<string>",
+    "passwordConfirmation": "<string>"
 }'```"
 "# Method Register new user
 ### Register new user
@@ -100,30 +100,30 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/auth/password-
 ## Request body
 ```json
 {
-  ""data"": {
-    ""description"": ""register data"",
-    ""properties"": {
-      ""email"": {
-        ""type"": ""string""
+  "data": {
+    "description": "register data",
+    "properties": {
+      "email": {
+        "type": "string"
       },
-      ""name"": {
-        ""type"": ""string"",
-        ""maxLength"": 255
+      "name": {
+        "type": "string",
+        "maxLength": 255
       },
-      ""password"": {
-        ""type"": ""string"",
-        ""minLength"": 3
+      "password": {
+        "type": "string",
+        "minLength": 3
       },
-      ""passwordConfirmation"": {
-        ""type"": ""string"",
-        ""minLength"": 3
+      "passwordConfirmation": {
+        "type": "string",
+        "minLength": 3
       }
     },
-    ""required"": [
-      ""email"",
-      ""name"",
-      ""password"",
-      ""passwordConfirmation""
+    "required": [
+      "email",
+      "name",
+      "password",
+      "passwordConfirmation"
     ]
   }
 }
@@ -140,10 +140,10 @@ curl --location --request POST '''https://api.voicer.software/api/v1/auth/regist
 --header '''Content-Type: application/json''' \
 --header '''Accept: application/json''' \
 --data '''{
-  ""email"": ""<string>"",
-  ""name"": ""<string>"",
-  ""password"": ""<string>"",
-  ""passwordConfirmation"": ""<string>""
+  "email": "<string>",
+  "name": "<string>",
+  "password": "<string>",
+  "passwordConfirmation": "<string>"
 }'''"
 "# Method get bot autoreply
 ### Get bot autoreply if chat is inactive based on defined conditions
@@ -161,11 +161,11 @@ curl --location --request POST '''https://api.voicer.software/api/v1/auth/regist
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Autorply model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""text"": {
-      ""type"": ""string""
+  "description": "Autorply model",
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string"
     }
   }
 }
@@ -190,29 +190,29 @@ No query parameters
 ## Request body
 ```json
 {
-  ""attachment"": {
-    ""type"": ""file"",
-    ""description"": ""attachment"",
-    ""name"": ""attachment"",
-    ""in"": ""formData"",
-    ""required"": true
+  "attachment": {
+    "type": "file",
+    "description": "attachment",
+    "name": "attachment",
+    "in": "formData",
+    "required": true
   }
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""OK"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""DeleteUrl"": {
-      ""type"": ""string""
+  "description": "OK",
+  "type": "object",
+  "properties": {
+    "DeleteUrl": {
+      "type": "string"
     },
-    ""attachmentType"": {
-      ""$ref"": ""#/definitions/domain.AttachmentType""
+    "attachmentType": {
+      "$ref": "#/definitions/domain.AttachmentType"
     },
-    ""attachmentUrl"": {
-      ""type"": ""string""
+    "attachmentUrl": {
+      "type": "string"
     }
   }
 }
@@ -240,16 +240,16 @@ curl --location --request POST '''https://api.voicer.software/api/v1/reviews/cha
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Chat model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""clientID"": {
-      ""type"": ""integer""
+  "description": "Chat model",
+  "type": "object",
+  "properties": {
+    "clientID": {
+      "type": "integer"
     },
-    ""log"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""$ref"": ""#/definitions/dtos.ChatLogEntry""
+    "log": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/dtos.ChatLogEntry"
       }
     }
   }
@@ -278,22 +278,22 @@ curl --location --request GET 'https://api.voicer.software/api/v1/reviews/{id}/c
 ## Request body
 ```json
 {
-  ""message"": {
-    ""attachmentUrl"": ""<string>"",
-    ""close"": <boolean>,
-    ""text"": ""<string>""
+  "message": {
+    "attachmentUrl": "<string>",
+    "close": <boolean>,
+    "text": "<string>"
   }
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""OK"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"":""OK""
+  "description": "OK",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example":"OK"
     }
   }
 }
@@ -304,10 +304,10 @@ curl --location --request POST 'https://api.voicer.software/api/v1/reviews/{id}/
 --header 'Authorization: Bearer Token` \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    ""message"": {
-        ""attachmentUrl"": ""<string>"",
-        ""close"": <boolean>,
-        ""text"": ""<string>""
+    "message": {
+        "attachmentUrl": "<string>",
+        "close": <boolean>,
+        "text": "<string>"
     }
 }'```
 Please replace `{id}` with the actual value of the review ID you want to send a message to."
@@ -326,13 +326,13 @@ Please replace `{id}` with the actual value of the review ID you want to send a 
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Chat history model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""history"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""$ref"": ""#/definitions/dtos.ChatLogEntry""
+  "description": "Chat history model",
+  "type": "object",
+  "properties": {
+    "history": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/dtos.ChatLogEntry"
       }
     }
   }
@@ -359,37 +359,37 @@ curl --location --request GET '''https://api.voicer.software/api/v1/reviews/{id}
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""ChatTemplate domain model"",
-  ""type"": ""array"",
-  ""items"": {
-    ""type"": ""object"",
-    ""properties"": {
-      ""companyID"": {
-        ""type"": ""integer""
+  "description": "ChatTemplate domain model",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "companyID": {
+        "type": "integer"
       },
-      ""createdAt"": {
-        ""type"": ""string""
+      "createdAt": {
+        "type": "string"
       },
-      ""fullhistoryURL"": {
-        ""type"": ""string""
+      "fullhistoryURL": {
+        "type": "string"
       },
-      ""historyURL"": {
-        ""type"": ""string""
+      "historyURL": {
+        "type": "string"
       },
-      ""id"": {
-        ""type"": ""integer""
+      "id": {
+        "type": "integer"
       },
-      ""link"": {
-        ""type"": ""string""
+      "link": {
+        "type": "string"
       },
-      ""sendURL"": {
-        ""type"": ""string""
+      "sendURL": {
+        "type": "string"
       },
-      ""type"": {
-        ""$ref"": ""#/definitions/domain.BotType""
+      "type": {
+        "$ref": "#/definitions/domain.BotType"
       },
-      ""updatedAt"": {
-        ""type"": ""string""
+      "updatedAt": {
+        "type": "string"
       }
     }
   }
@@ -417,22 +417,22 @@ curl --location --request GET 'https://api.voicer.software/api/v1/companies/{com
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""ChatTemplate domain model"",
-  ""type"": ""array"",
-  ""items"": {
-    ""type"": ""object"",
-    ""properties"": {
-      ""company_id"": {
-        ""type"": ""integer""
+  "description": "ChatTemplate domain model",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "company_id": {
+        "type": "integer"
       },
-      ""content"": {
-        ""type"": ""string""
+      "content": {
+        "type": "string"
       },
-      ""id"": {
-        ""type"": ""integer""
+      "id": {
+        "type": "integer"
       },
-      ""key"": {
-        ""type"": ""string""
+      "key": {
+        "type": "string"
       }
     }
   }
@@ -461,8 +461,8 @@ To replace `{company_id}` with the actual value, please provide the specific ID 
 ## Request body
 ```json
 {
-  ""content"": ""string"",
-  ""key"": ""string""
+  "content": "string",
+  "key": "string"
 }
 ```
 ## Response body (code 200)
@@ -477,8 +477,8 @@ curl --location --request POST '''https://api.voicer.software/api/v1/companies/{
 --header '''Content-Type: application/json''' \
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token``` --data '''{
-  ""content"": ""<string>"",
-  ""key"": ""<string>""
+  "content": "<string>",
+  "key": "<string>"
 }'''```"
 Error: Could not get a response from the API.
 Error: Could not get a response from the API.
@@ -493,27 +493,27 @@ Error: Could not get a response from the API.
 ## Request body
 ```json
 {
-  ""data"": {
-    ""description"": ""client"",
-    ""name"": ""data"",
-    ""in"": ""body"",
-    ""required"": true,
-    ""type"": ""object"",
-    ""properties"": {
-      ""answers"": {
-        ""type"": ""array"",
-        ""items"": {
-          ""$ref"": ""#/definitions/client.StoreRequestAnswerData""
+  "data": {
+    "description": "client",
+    "name": "data",
+    "in": "body",
+    "required": true,
+    "type": "object",
+    "properties": {
+      "answers": {
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/client.StoreRequestAnswerData"
         }
       },
-      ""formID"": {
-        ""type"": ""integer""
+      "formID": {
+        "type": "integer"
       },
-      ""sessionID"": {
-        ""type"": ""string""
+      "sessionID": {
+        "type": "string"
       },
-      ""status"": {
-        ""type"": ""integer""
+      "status": {
+        "type": "integer"
       }
     }
   }
@@ -522,12 +522,12 @@ Error: Could not get a response from the API.
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Created"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "Created",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -539,14 +539,14 @@ curl --location --request POST 'https://api.voicer.software/api/v1/client' \
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token` \
 --data-raw '{
-  ""formID"": <integer>,
-  ""sessionID"": ""<string>"",
-  ""answers"": [
+  "formID": <integer>,
+  "sessionID": "<string>",
+  "answers": [
     {
-      ""<client.StoreRequestAnswerData>"": {}
+      "<client.StoreRequestAnswerData>": {}
     }
   ],
-  ""status"": <integer>
+  "status": <integer>
 }'```"
 "# Method get form field
 ### Show form field
@@ -564,57 +564,57 @@ curl --location --request POST 'https://api.voicer.software/api/v1/client' \
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Form field"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""answers"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""$ref"": ""#/definitions/domain.AnswerOption""
+  "description": "Form field",
+  "type": "object",
+  "properties": {
+    "answers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/domain.AnswerOption"
       }
     },
-    ""createdAt"": {
-      ""type"": ""string""
+    "createdAt": {
+      "type": "string"
     },
-    ""fieldID"": {
-      ""type"": ""integer""
+    "fieldID": {
+      "type": "integer"
     },
-    ""formID"": {
-      ""type"": ""integer""
+    "formID": {
+      "type": "integer"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""options"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""key"": {
-          ""type"": ""string""
+    "options": {
+      "type": "array",
+      "items": {
+        "key": {
+          "type": "string"
         },
-        ""value"": {
-          ""type"": ""string""
+        "value": {
+          "type": "string"
         }
       }
     },
-    ""question"": {
-      ""type"": ""string""
+    "question": {
+      "type": "string"
     },
-    ""styles"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""key"": {
-          ""type"": ""string""
+    "styles": {
+      "type": "array",
+      "items": {
+        "key": {
+          "type": "string"
         },
-        ""value"": {
-          ""type"": ""string""
+        "value": {
+          "type": "string"
         }
       }
     },
-    ""type"": {
-      ""type"": ""string""
+    "type": {
+      "type": "string"
     },
-    ""updatedAt"": {
-      ""type"": ""string""
+    "updatedAt": {
+      "type": "string"
     }
   }
 }
@@ -643,29 +643,29 @@ curl --location --request GET 'https//api.voicer.software/api/v1/client/forms/{f
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Review response"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""bots"": {
-      ""$ref"": ""#/definitions/responses.ReviewBotsResponse""
+  "description": "Review response",
+  "type": "object",
+  "properties": {
+    "bots": {
+      "$ref": "#/definitions/responses.ReviewBotsResponse"
     },
-    ""company"": {
-      ""$ref"": ""#/definitions/domain.Company""
+    "company": {
+      "$ref": "#/definitions/domain.Company"
     },
-    ""form"": {
-      ""$ref"": ""#/definitions/domain.Form""
+    "form": {
+      "$ref": "#/definitions/domain.Form"
     },
-    ""languages"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""$ref"": ""#/definitions/domain.Language""
+    "languages": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/domain.Language"
       }
     },
-    ""node"": {
-      ""$ref"": ""#/definitions/domain.Node""
+    "node": {
+      "$ref": "#/definitions/domain.Node"
     },
-    ""sessionID"": {
-      ""type"": ""string""
+    "sessionID": {
+      "type": "string"
     }
   }
 }
@@ -690,10 +690,10 @@ Error: Could not get a response from the API.
 ## Request body
 ```json
 {
-  ""company"": {
-    ""alias"": ""<string>"",
-    ""name"": ""<string>"",
-    ""enableOverdue"": <boolean>
+  "company": {
+    "alias": "<string>",
+    "name": "<string>",
+    "enableOverdue": <boolean>
   }
 }
 ```
@@ -710,10 +710,10 @@ curl --location --request POST 'https://api.voicer.software/api/v1/companies' \
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token' \
 --data '{
-  ""company"": {
-    ""alias"": ""<string>"",
-    ""name"": ""<string>"",
-    ""enableOverdue"": <boolean>
+  "company": {
+    "alias": "<string>",
+    "name": "<string>",
+    "enableOverdue": <boolean>
   }
 }'```"
 "# Method get company info by id
@@ -731,26 +731,26 @@ curl --location --request POST 'https://api.voicer.software/api/v1/companies' \
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Company domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""alias"": {
-      ""type"": ""string""
+  "description": "Company domain model",
+  "type": "object",
+  "properties": {
+    "alias": {
+      "type": "string"
     },
-    ""createdAt"": {
-      ""type"": ""string""
+    "createdAt": {
+      "type": "string"
     },
-    ""enableOverdue"": {
-      ""type"": ""boolean""
+    "enableOverdue": {
+      "type": "boolean"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""name"": {
-      ""type"": ""string""
+    "name": {
+      "type": "string"
     },
-    ""updatedAt"": {
-      ""type"": ""string""
+    "updatedAt": {
+      "type": "string"
     }
   }
 }
@@ -777,22 +777,22 @@ curl --location --request GET 'https://api.voicer.software/api/v1/companies/{id}
 ## Request body
 ```json
 {
-  ""description"": ""company"",
-  ""name"": ""company"",
-  ""in"": ""body"",
-  ""required"": true,
-  ""type"": ""object"",
-  ""properties"": {
-    ""alias"": {
-      ""type"": ""string"",
-      ""maxLength"": 255
+  "description": "company",
+  "name": "company",
+  "in": "body",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "alias": {
+      "type": "string",
+      "maxLength": 255
     },
-    ""enableOverdue"": {
-      ""type"": ""boolean""
+    "enableOverdue": {
+      "type": "boolean"
     },
-    ""name"": {
-      ""type"": ""string"",
-      ""maxLength"": 255
+    "name": {
+      "type": "string",
+      "maxLength": 255
     }
   }
 }
@@ -800,12 +800,12 @@ curl --location --request GET 'https://api.voicer.software/api/v1/companies/{id}
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""ok"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "ok",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -837,12 +837,12 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/companies/{i
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""ok"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "ok",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -873,31 +873,31 @@ curl --location --request DELETE '''https://api.voicer.software/api/v1/companies
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""User domain model"",
-  ""type"": ""array"",
-  ""items"": {
-    ""type"": ""object"",
-    ""properties"": {
-      ""createdAt"": {
-        ""type"": ""string""
+  "description": "User domain model",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "createdAt": {
+        "type": "string"
       },
-      ""email"": {
-        ""type"": ""string""
+      "email": {
+        "type": "string"
       },
-      ""id"": {
-        ""type"": ""integer""
+      "id": {
+        "type": "integer"
       },
-      ""name"": {
-        ""type"": ""string""
+      "name": {
+        "type": "string"
       },
-      ""nodesCount"": {
-        ""type"": ""integer""
+      "nodesCount": {
+        "type": "integer"
       },
-      ""responsibleCount"": {
-        ""type"": ""integer""
+      "responsibleCount": {
+        "type": "integer"
       },
-      ""updatedAt"": {
-        ""type"": ""string""
+      "updatedAt": {
+        "type": "string"
       }
     }
   }
@@ -910,8 +910,8 @@ curl --location --request GET '''https://api.voicer.software/api/v1/companies/{i
 --header '''Authorization: Bearer Token` '''\
 --header '''Content-Type: application/json''' \
 --data-raw '''{
-    ""limit"": <integer>,
-    ""offset"": <integer>
+    "limit": <integer>,
+    "offset": <integer>
 }'''
 ```"
 "# Method get company languages
@@ -929,19 +929,19 @@ curl --location --request GET '''https://api.voicer.software/api/v1/companies/{i
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Language domain model"",
-  ""type"": ""array"",
-  ""items"": {
-    ""type"": ""object"",
-    ""properties"": {
-      ""icon"": {
-        ""type"": ""string""
+  "description": "Language domain model",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "icon": {
+        "type": "string"
       },
-      ""id"": {
-        ""type"": ""integer""
+      "id": {
+        "type": "integer"
       },
-      ""name"": {
-        ""type"": ""string""
+      "name": {
+        "type": "string"
       }
     }
   }
@@ -967,52 +967,52 @@ Error: Could not get a response from the API.
 ## Request body
 ```json
 {
-  ""contact"": {
-    ""clientID"": <integer>,
-    ""client_photo"": ""<string>"",
-    ""email"": ""<string>"",
-    ""phone"": ""<string>"",
-    ""telegramID"": ""<string>"",
-    ""viberID"": ""<string>"",
-    ""whatsappID"": ""<string>""
+  "contact": {
+    "clientID": <integer>,
+    "client_photo": "<string>",
+    "email": "<string>",
+    "phone": "<string>",
+    "telegramID": "<string>",
+    "viberID": "<string>",
+    "whatsappID": "<string>"
   }
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Contact domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""clientID"": {
-      ""type"": ""integer""
+  "description": "Contact domain model",
+  "type": "object",
+  "properties": {
+    "clientID": {
+      "type": "integer"
     },
-    ""client_photo"": {
-      ""type"": ""string""
+    "client_photo": {
+      "type": "string"
     },
-    ""createdAt"": {
-      ""type"": ""string""
+    "createdAt": {
+      "type": "string"
     },
-    ""email"": {
-      ""type"": ""string""
+    "email": {
+      "type": "string"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""phone"": {
-      ""type"": ""string""
+    "phone": {
+      "type": "string"
     },
-    ""telegramID"": {
-      ""type"": ""string""
+    "telegramID": {
+      "type": "string"
     },
-    ""updatedAt"": {
-      ""type"": ""string""
+    "updatedAt": {
+      "type": "string"
     },
-    ""viberID"": {
-      ""type"": ""string""
+    "viberID": {
+      "type": "string"
     },
-    ""whatsappID"": {
-      ""type"": ""string""
+    "whatsappID": {
+      "type": "string"
     }
   }
 }
@@ -1024,14 +1024,14 @@ curl --location --request POST 'https://api.voicer.software/api/v1/contacts' \
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token' \
 --data-raw '{
-  ""contact"": {
-    ""clientID"": <integer>,
-    ""client_photo"": ""<string>"",
-    ""email"": ""<string>"",
-    ""phone"": ""<string>"",
-    ""telegramID"": ""<string>"",
-    ""viberID"": ""<string>"",
-    ""whatsappID"": ""<string>""
+  "contact": {
+    "clientID": <integer>,
+    "client_photo": "<string>",
+    "email": "<string>",
+    "phone": "<string>",
+    "telegramID": "<string>",
+    "viberID": "<string>",
+    "whatsappID": "<string>"
   }
 }'```"
 "# Method Store chat in cache
@@ -1045,20 +1045,20 @@ curl --location --request POST 'https://api.voicer.software/api/v1/contacts' \
 ## Request body
 ```json
 {
-  ""chatID"": ""<string>"",
-  ""type"": ""<string>"",
-  ""uid"": ""<string>""
+  "chatID": "<string>",
+  "type": "<string>",
+  "uid": "<string>"
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Success"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "Success",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -1070,9 +1070,9 @@ curl --location --request POST 'https://api.voicer.software/api/v1/contacts/chat
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token`' \
 --data-raw '{
-  ""chatID"": ""<string>"",
-  ""type"": ""<string>"",
-  ""uid"": ""<string>""
+  "chatID": "<string>",
+  "type": "<string>",
+  "uid": "<string>"
 }'```"
 "# Method get Contact info by id
 ### Show contact
@@ -1089,38 +1089,38 @@ curl --location --request POST 'https://api.voicer.software/api/v1/contacts/chat
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Contact domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""clientID"": {
-      ""type"": ""integer""
+  "description": "Contact domain model",
+  "type": "object",
+  "properties": {
+    "clientID": {
+      "type": "integer"
     },
-    ""client_photo"": {
-      ""type"": ""string""
+    "client_photo": {
+      "type": "string"
     },
-    ""createdAt"": {
-      ""type"": ""string""
+    "createdAt": {
+      "type": "string"
     },
-    ""email"": {
-      ""type"": ""string""
+    "email": {
+      "type": "string"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""phone"": {
-      ""type"": ""string""
+    "phone": {
+      "type": "string"
     },
-    ""telegramID"": {
-      ""type"": ""string""
+    "telegramID": {
+      "type": "string"
     },
-    ""updatedAt"": {
-      ""type"": ""string""
+    "updatedAt": {
+      "type": "string"
     },
-    ""viberID"": {
-      ""type"": ""string""
+    "viberID": {
+      "type": "string"
     },
-    ""whatsappID"": {
-      ""type"": ""string""
+    "whatsappID": {
+      "type": "string"
     }
   }
 }
@@ -1148,22 +1148,22 @@ Please note that you need to replace `{id}` with the actual ID value of the cont
 ## Request body
 ```json
 {
-  ""email"": ""<string>"",
-  ""phone"": ""<string>"",
-  ""telegramID"": ""<string>"",
-  ""viberID"": ""<string>"",
-  ""whatsappID"": ""<string>""
+  "email": "<string>",
+  "phone": "<string>",
+  "telegramID": "<string>",
+  "viberID": "<string>",
+  "whatsappID": "<string>"
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""ok"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "ok",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -1175,11 +1175,11 @@ curl--location --request PUT 'https://api.voicer.software/api/v1/contacts/{id}' 
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token' \
 --data-raw '{
-  ""email"": ""<string>"",
-  ""phone"": ""<string>"",
-  ""telegramID"": ""<string>"",
-  ""viberID"": ""<string>"",
-  ""whatsappID"": ""<string>""
+  "email": "<string>",
+  "phone": "<string>",
+  "telegramID": "<string>",
+  "viberID": "<string>",
+  "whatsappID": "<string>"
 }'```"
 Error: Could not get a response from the API.
 "# Method get all contacts by review id
@@ -1197,40 +1197,40 @@ Error: Could not get a response from the API.
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Contact domain model"",
-  ""type"": ""array"",
-  ""items"": {
-    ""type"": ""object"",
-    ""properties"": {
-      ""clientID"": {
-        ""type"": ""integer""
+  "description": "Contact domain model",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "clientID": {
+        "type": "integer"
       },
-      ""client_photo"": {
-        ""type"": ""string""
+      "client_photo": {
+        "type": "string"
       },
-      ""createdAt"": {
-        ""type"": ""string""
+      "createdAt": {
+        "type": "string"
       },
-      ""email"": {
-        ""type"": ""string""
+      "email": {
+        "type": "string"
       },
-      ""id"": {
-        ""type"": ""integer""
+      "id": {
+        "type": "integer"
       },
-      ""phone"": {
-        ""type"": ""string""
+      "phone": {
+        "type": "string"
       },
-      ""telegramID"": {
-        ""type"": ""string""
+      "telegramID": {
+        "type": "string"
       },
-      ""updatedAt"": {
-        ""type"": ""string""
+      "updatedAt": {
+        "type": "string"
       },
-      ""viberID"": {
-        ""type"": ""string""
+      "viberID": {
+        "type": "string"
       },
-      ""whatsappID"": {
-        ""type"": ""string""
+      "whatsappID": {
+        "type": "string"
       }
     }
   }
@@ -1259,8 +1259,8 @@ curl --location --request GET '''https://api.voicer.software/api/v1/reviews/{id}
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Nodes count"",
-  ""type"": ""integer""
+  "description": "Nodes count",
+  "type": "integer"
 }
 ```
 ## CURL Requests
@@ -1289,8 +1289,8 @@ curl --location --request GET 'https://api.voicer.software/api/v1/counts/node?co
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Reviews count"",
-  ""type"": ""integer""
+  "description": "Reviews count",
+  "type": "integer"
 }
 ```
 ## CURL Requests
@@ -1300,12 +1300,12 @@ curl --location --request GET 'https://api.voicer.software/api/v1/counts/review'
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --data-raw '{
-    ""companies"": [array_of_company_ids],
-    ""nodes"": [array_of_node_ids],
-    ""sources"": [array_of_source_ids],
-    ""statuses"": [array_of_client_statuses],
-    ""from"": ""from_date_in_RFC3339_format"",
-    ""to"": ""to_date_in_RFC3339_format""
+    "companies": [array_of_company_ids],
+    "nodes": [array_of_node_ids],
+    "sources": [array_of_source_ids],
+    "statuses": [array_of_client_statuses],
+    "from": "from_date_in_RFC3339_format",
+    "to": "to_date_in_RFC3339_format"
 }'```
 Replace `[array_of_company_ids]`, `[array_of_node_ids]`, `[array_of_source_ids]`, `[array_of_client_statuses]`, `from_date_in_RFC3339_format`, and `to_date_in_RFC3339_format` with the actual values you want to use."
 Error: Could not get a response from the API.
@@ -1324,31 +1324,31 @@ Error: Could not get a response from the API.
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Document domain model"",
-  ""type"": ""array"",
-  ""items"": {
-    ""type"": ""object"",
-    ""properties"": {
-      ""company_id"": {
-        ""type"": ""integer""
+  "description": "Document domain model",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "company_id": {
+        "type": "integer"
       },
-      ""created_at"": {
-        ""type"": ""string""
+      "created_at": {
+        "type": "string"
       },
-      ""description"": {
-        ""type"": ""string""
+      "description": {
+        "type": "string"
       },
-      ""file_id"": {
-        ""type"": ""integer""
+      "file_id": {
+        "type": "integer"
       },
-      ""name"": {
-        ""type"": ""string""
+      "name": {
+        "type": "string"
       },
-      ""updated_at"": {
-        ""type"": ""string""
+      "updated_at": {
+        "type": "string"
       },
-      ""url"": {
-        ""type"": ""string""
+      "url": {
+        "type": "string"
       }
     }
   }
@@ -1377,39 +1377,39 @@ curl --location --request GET 'https://api.voicer.software/api/v1/companies/{id}
 ## Request body
 ```json
 {
-  ""company_id"": {""type"":""integer""},
-  ""description"": {""type"":""string"",""maxLength"":255},
-  ""file_id"": {""type"":""integer""},
-  ""name"": {""type"":""string"",""maxLength"":255},
-  ""url"": {""type"":""string"",""maxLength"":255}
+  "company_id": {"type":"integer"},
+  "description": {"type":"string","maxLength":255},
+  "file_id": {"type":"integer"},
+  "name": {"type":"string","maxLength":255},
+  "url": {"type":"string","maxLength":255}
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Document domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""company_id"": {
-      ""type"": ""integer""
+  "description": "Document domain model",
+  "type": "object",
+  "properties": {
+    "company_id": {
+      "type": "integer"
     },
-    ""created_at"": {
-      ""type"": ""string""
+    "created_at": {
+      "type": "string"
     },
-    ""description"": {
-      ""type"": ""string""
+    "description": {
+      "type": "string"
     },
-    ""file_id"": {
-      ""type"": ""integer""
+    "file_id": {
+      "type": "integer"
     },
-    ""name"": {
-      ""type"": ""string""
+    "name": {
+      "type": "string"
     },
-    ""updated_at"": {
-      ""type"": ""string""
+    "updated_at": {
+      "type": "string"
     },
-    ""url"": {
-      ""type"": ""string""
+    "url": {
+      "type": "string"
     }
   }
 }
@@ -1421,11 +1421,11 @@ curl --location --request POST 'https://api.voicer.software/api/v1/documents' \
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token' \
 --data-raw '{
-  ""company_id"": <integer>,
-  ""description"": ""<string>"",
-  ""file_id"": <integer>,
-  ""name"": ""<string>"",
-  ""url"": ""<string>""
+  "company_id": <integer>,
+  "description": "<string>",
+  "file_id": <integer>,
+  "name": "<string>",
+  "url": "<string>"
 }'```"
 "# Method get document by id
 ### Show document
@@ -1442,29 +1442,29 @@ curl --location --request POST 'https://api.voicer.software/api/v1/documents' \
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Document domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""company_id"": {
-      ""type"": ""integer""
+  "description": "Document domain model",
+  "type": "object",
+  "properties": {
+    "company_id": {
+      "type": "integer"
     },
-    ""created_at"": {
-      ""type"": ""string""
+    "created_at": {
+      "type": "string"
     },
-    ""description"": {
-      ""type"": ""string""
+    "description": {
+      "type": "string"
     },
-    ""file_id"": {
-      ""type"": ""integer""
+    "file_id": {
+      "type": "integer"
     },
-    ""name"": {
-      ""type"": ""string""
+    "name": {
+      "type": "string"
     },
-    ""updated_at"": {
-      ""type"": ""string""
+    "updated_at": {
+      "type": "string"
     },
-    ""url"": {
-      ""type"": ""string""
+    "url": {
+      "type": "string"
     }
   }
 }
@@ -1491,29 +1491,29 @@ curl --location --request GET '''https://api.voicer.software/api/v1/documents/{i
 ## Request body
 ```json
 {
-  ""description"":{
-    ""type"":""string"",
-    ""maxLength"":255
+  "description":{
+    "type":"string",
+    "maxLength":255
   },
-  ""name"":{
-    ""type"":""string"",
-    ""maxLength"":255
+  "name":{
+    "type":"string",
+    "maxLength":255
   },
-  ""url"":{
-    ""type"":""string"",
-    ""maxLength"":255
+  "url":{
+    "type":"string",
+    "maxLength":255
   }
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""ok"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "ok",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -1525,9 +1525,9 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/documents/{i
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token''' \
 --data '''{
-  ""description"": ""<string>"",
-  ""name"": ""<string>"",
-  ""url"": ""<string>""
+  "description": "<string>",
+  "name": "<string>",
+  "url": "<string>"
 }'''```"
 "# Method delete document id
 ### Delete document
@@ -1544,12 +1544,12 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/documents/{i
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""ok"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "ok",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -1575,35 +1575,35 @@ curl --location --request DELETE '''https://api.voicer.software/api/v1/documents
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""EmailTemplates list"",
-  ""type"": ""array"",
-  ""items"": {
-    ""type"": ""array"",
-    ""items"": {
-      ""type"": ""object"",
-      ""properties"": {
-        ""createdAt"": {
-          ""type"": ""string""
+  "description": "EmailTemplates list",
+  "type": "array",
+  "items": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "createdAt": {
+          "type": "string"
         },
-        ""id"": {
-          ""type"": ""integer""
+        "id": {
+          "type": "integer"
         },
-        ""languageCode"": {
-          ""type"": ""string""
+        "languageCode": {
+          "type": "string"
         },
-        ""name"": {
-          ""type"": ""string""
+        "name": {
+          "type": "string"
         },
-        ""subject"": {
-          ""type"": ""string""
+        "subject": {
+          "type": "string"
         },
-        ""updatedAt"": {
-          ""type"": ""string""
+        "updatedAt": {
+          "type": "string"
         },
-        ""variables"": {
-          ""type"": ""array"",
-          ""items"": {
-            ""type"": ""string""
+        "variables": {
+          "type": "array",
+          "items": {
+            "type": "string"
           }
         }
       }
@@ -1626,13 +1626,13 @@ curl --location --request GET '''https://api.voicer.software/api/v1/email-templa
 ## Request body
 ```json
 {
-  ""data"": {
-    ""languageCode"": ""string"",
-    ""name"": ""string"",
-    ""subject"": ""string"",
-    ""variables"": [
-      ""string1"",
-      ""string2""
+  "data": {
+    "languageCode": "string",
+    "name": "string",
+    "subject": "string",
+    "variables": [
+      "string1",
+      "string2"
     ]
   }
 }
@@ -1650,10 +1650,10 @@ curl --location --request POST 'https://api.voicer.software/api/v1/email-templat
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token' \
 --data-raw '{
-    ""languageCode"": ""<string>"",
-    ""name"": ""<string>"",
-    ""subject"": ""<string>"",
-    ""variables"": [""<string1>"", ""<string2>""]
+    "languageCode": "<string>",
+    "name": "<string>",
+    "subject": "<string>",
+    "variables": ["<string1>", "<string2>"]
 }'```"
 "# Method find EmailTemplate by ID
 ### Find email-template by id
@@ -1670,31 +1670,31 @@ curl --location --request POST 'https://api.voicer.software/api/v1/email-templat
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""EmailTemplate domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""createdAt"": {
-      ""type"": ""string""
+  "description": "EmailTemplate domain model",
+  "type": "object",
+  "properties": {
+    "createdAt": {
+      "type": "string"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""languageCode"": {
-      ""type"": ""string""
+    "languageCode": {
+      "type": "string"
     },
-    ""name"": {
-      ""type"": ""string""
+    "name": {
+      "type": "string"
     },
-    ""subject"": {
-      ""type"": ""string""
+    "subject": {
+      "type": "string"
     },
-    ""updatedAt"": {
-      ""type"": ""string""
+    "updatedAt": {
+      "type": "string"
     },
-    ""variables"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""type"": ""string""
+    "variables": {
+      "type": "array",
+      "items": {
+        "type": "string"
       }
     }
   }
@@ -1722,21 +1722,21 @@ curl --location --request GET '''https://api.voicer.software/api/v1/email-templa
 ## Request body
 ```json
 {
-  ""languageCode"": ""<string>"",
-  ""name"": ""<string>"",
-  ""subject"": ""<string>"",
-  ""variables"": [""<string>"", ""<string>""]
+  "languageCode": "<string>",
+  "name": "<string>",
+  "subject": "<string>",
+  "variables": ["<string>", "<string>"]
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Updated"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "Updated",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -1747,10 +1747,10 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/email-template
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer Token' \
 --data-raw '{
-  ""languageCode"": ""<string>"",
-  ""name"": ""<string>"",
-  ""subject"": ""<string>"",
-  ""variables"": [""<string>"", ""<string>""]
+  "languageCode": "<string>",
+  "name": "<string>",
+  "subject": "<string>",
+  "variables": ["<string>", "<string>"]
 }'```"
 "# Method Delete Email Template by ID
 ### Delete email-template
@@ -1767,12 +1767,12 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/email-template
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Deleted"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "Deleted",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -1798,77 +1798,77 @@ curl --location --request DELETE '''https://api.voicer.software/api/v1/email-tem
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Form domain model"",
-  ""type"": ""array"",
-  ""items"": {
-    ""type"": ""object"",
-    ""properties"": {
-      ""anonymous"": {
-        ""type"": ""boolean""
+  "description": "Form domain model",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "anonymous": {
+        "type": "boolean"
       },
-      ""companyID"": {
-        ""type"": ""integer""
+      "companyID": {
+        "type": "integer"
       },
-      ""createdAt"": {
-        ""type"": ""string""
+      "createdAt": {
+        "type": "string"
       },
-      ""fieldID"": {
-        ""type"": ""integer""
+      "fieldID": {
+        "type": "integer"
       },
-      ""fields"": {
-        ""type"": ""array"",
-        ""items"": {
-          ""$ref"": ""#/definitions/domain.FormField""
+      "fields": {
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/domain.FormField"
         }
       },
-      ""id"": {
-        ""type"": ""integer""
+      "id": {
+        "type": "integer"
       },
-      ""isActive"": {
-        ""type"": ""boolean""
+      "isActive": {
+        "type": "boolean"
       },
-      ""isDefault"": {
-        ""type"": ""boolean""
+      "isDefault": {
+        "type": "boolean"
       },
-      ""languageID"": {
-        ""type"": ""integer""
+      "languageID": {
+        "type": "integer"
       },
-      ""logo"": {
-        ""type"": ""string""
+      "logo": {
+        "type": "string"
       },
-      ""name"": {
-        ""type"": ""string""
+      "name": {
+        "type": "string"
       },
-      ""nodeID"": {
-        ""type"": ""integer""
+      "nodeID": {
+        "type": "integer"
       },
-      ""options"": {
-        ""type"": ""array"",
-        ""items"": {
-          ""key"": {
-            ""type"": ""string""
+      "options": {
+        "type": "array",
+        "items": {
+          "key": {
+            "type": "string"
           },
-          ""value"": {
-            ""type"": ""string""
+          "value": {
+            "type": "string"
           }
         }
       },
-      ""status"": {
-        ""type"": ""string""
+      "status": {
+        "type": "string"
       },
-      ""styles"": {
-        ""type"": ""array"",
-        ""items"": {
-          ""key"": {
-            ""type"": ""string""
+      "styles": {
+        "type": "array",
+        "items": {
+          "key": {
+            "type": "string"
           },
-          ""value"": {
-            ""type"": ""string""
+          "value": {
+            "type": "string"
           }
         }
       },
-      ""updatedAt"": {
-        ""type"": ""string""
+      "updatedAt": {
+        "type": "string"
       }
     }
   }
@@ -1893,25 +1893,25 @@ curl --location --request GET '''https://api.voicer.software/api/v1/companies/{i
 ## Request body
 ```json
 {
-  ""form"": {
-    ""companyID"": <integer>,
-    ""languageID"": <integer>,
-    ""name"": ""<string>"",
-    ""nodeID"": <integer>,
-    ""status"": ""<string>"",
-    ""anonymous"": <boolean>,
-    ""isActive"": <boolean>,
-    ""isDefault"": <boolean>,
-    ""logo"": ""<string>"",
-    ""fieldID"": <integer>,
-    ""options"": [
+  "form": {
+    "companyID": <integer>,
+    "languageID": <integer>,
+    "name": "<string>",
+    "nodeID": <integer>,
+    "status": "<string>",
+    "anonymous": <boolean>,
+    "isActive": <boolean>,
+    "isDefault": <boolean>,
+    "logo": "<string>",
+    "fieldID": <integer>,
+    "options": [
       {
-        ""$ref"": ""#/definitions/form.StoreRequestOption""
+        "$ref": "#/definitions/form.StoreRequestOption"
       }
     ],
-    ""styles"": [
+    "styles": [
       {
-        ""$ref"": ""#/definitions/form.StoreRequestOption""
+        "$ref": "#/definitions/form.StoreRequestOption"
       }
     ]
   }
@@ -1921,75 +1921,75 @@ curl --location --request GET '''https://api.voicer.software/api/v1/companies/{i
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Form domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""anonymous"": {
-      ""type"": ""boolean""
+  "description": "Form domain model",
+  "type": "object",
+  "properties": {
+    "anonymous": {
+      "type": "boolean"
     },
-    ""companyID"": {
-      ""type"": ""integer""
+    "companyID": {
+      "type": "integer"
     },
-    ""createdAt"": {
-      ""type"": ""string""
+    "createdAt": {
+      "type": "string"
     },
-    ""fieldID"": {
-      ""type"": ""integer""
+    "fieldID": {
+      "type": "integer"
     },
-    ""fields"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""$ref"": ""#/definitions/domain.FormField""
+    "fields": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/domain.FormField"
       }
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""isActive"": {
-      ""type"": ""boolean""
+    "isActive": {
+      "type": "boolean"
     },
-    ""isDefault"": {
-      ""type"": ""boolean""
+    "isDefault": {
+      "type": "boolean"
     },
-    ""languageID"": {
-      ""type"": ""integer""
+    "languageID": {
+      "type": "integer"
     },
-    ""logo"": {
-      ""type"": ""string""
+    "logo": {
+      "type": "string"
     },
-    ""name"": {
-      ""type"": ""string""
+    "name": {
+      "type": "string"
     },
-    ""nodeID"": {
-      ""type"": ""integer""
+    "nodeID": {
+      "type": "integer"
     },
-    ""options"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""key"": {
-          ""type"": ""string""
+    "options": {
+      "type": "array",
+      "items": {
+        "key": {
+          "type": "string"
         },
-        ""value"": {
-          ""type"": ""string""
+        "value": {
+          "type": "string"
         }
       }
     },
-    ""status"": {
-      ""type"": ""string""
+    "status": {
+      "type": "string"
     },
-    ""styles"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""key"": {
-          ""type"": ""string""
+    "styles": {
+      "type": "array",
+      "items": {
+        "key": {
+          "type": "string"
         },
-        ""value"": {
-          ""type"": ""string""
+        "value": {
+          "type": "string"
         }
       }
     },
-    ""updatedAt"": {
-      ""type"": ""string""
+    "updatedAt": {
+      "type": "string"
     }
   }
 }
@@ -2002,25 +2002,25 @@ curl --location --request POST 'https://api.voicer.software/api/v1/forms' \
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token' \
 --data '{
-  ""form"": {
-    ""companyID"": <integer>,
-    ""languageID"": <integer>,
-    ""name"": ""<string>"",
-    ""nodeID"": <integer>,
-    ""status"": ""<string>"",
-    ""anonymous"": <boolean>,
-    ""isActive"": <boolean>,
-    ""isDefault"": <boolean>,
-    ""logo"": ""<string>"",
-    ""fieldID"": <integer>,
-    ""options"": [
+  "form": {
+    "companyID": <integer>,
+    "languageID": <integer>,
+    "name": "<string>",
+    "nodeID": <integer>,
+    "status": "<string>",
+    "anonymous": <boolean>,
+    "isActive": <boolean>,
+    "isDefault": <boolean>,
+    "logo": "<string>",
+    "fieldID": <integer>,
+    "options": [
       {
-        ""$ref"": ""#/definitions/form.StoreRequestOption""
+        "$ref": "#/definitions/form.StoreRequestOption"
       }
     ],
-    ""styles"": [
+    "styles": [
       {
-        ""$ref"": ""#/definitions/form.StoreRequestOption""
+        "$ref": "#/definitions/form.StoreRequestOption"
       }
     ]
   }
@@ -2040,67 +2040,67 @@ curl --location --request POST 'https://api.voicer.software/api/v1/forms' \
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Form domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""anonymous"": {
-      ""type"": ""boolean""
+  "description": "Form domain model",
+  "type": "object",
+  "properties": {
+    "anonymous": {
+      "type": "boolean"
     },
-    ""companyID"": {
-      ""type"": ""integer""
+    "companyID": {
+      "type": "integer"
     },
-    ""createdAt"": {
-      ""type"": ""string""
+    "createdAt": {
+      "type": "string"
     },
-    ""fieldID"": {
-      ""type"": ""integer""
+    "fieldID": {
+      "type": "integer"
     },
-    ""fields"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""$ref"": ""#/definitions/domain.FormField""
+    "fields": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/domain.FormField"
       }
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""isActive"": {
-      ""type"": ""boolean""
+    "isActive": {
+      "type": "boolean"
     },
-    ""isDefault"": {
-      ""type"": ""boolean""
+    "isDefault": {
+      "type": "boolean"
     },
-    ""languageID"": {
-      ""type"": ""integer""
+    "languageID": {
+      "type": "integer"
     },
-    ""logo"": {
-      ""type"": ""string""
+    "logo": {
+      "type": "string"
     },
-    ""name"": {
-      ""type"": ""string""
+    "name": {
+      "type": "string"
     },
-    ""nodeID"": {
-      ""type"": ""integer""
+    "nodeID": {
+      "type": "integer"
     },
-    ""options"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""key"": {""type"":""string""},
-        ""value"": {""type"":""string""}
+    "options": {
+      "type": "array",
+      "items": {
+        "key": {"type":"string"},
+        "value": {"type":"string"}
       }
     },
-    ""status"": {
-      ""type"": ""string""
+    "status": {
+      "type": "string"
     },
-    ""styles"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""key"": {""type"":""string""},
-        ""value"": {""type"":""string""}
+    "styles": {
+      "type": "array",
+      "items": {
+        "key": {"type":"string"},
+        "value": {"type":"string"}
       }
     },
-    ""updatedAt"": {
-      ""type"": ""string""
+    "updatedAt": {
+      "type": "string"
     }
   }
 }
@@ -2113,7 +2113,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/forms/{id}''
 --header '''Accept: application/json''' \
 --data '''
 {
-  ""id"": <integer>
+  "id": <integer>
 }
 '''```"
 "# Method Update form
@@ -2150,12 +2150,12 @@ curl --location --request GET '''https://api.voicer.software/api/v1/forms/{id}''
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""ok"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "ok",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -2168,19 +2168,19 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/forms/{id}' \
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token' \
 --data '{
-  ""form"": {
-    ""anonymous"": ""<boolean>"",
-    ""companyID"": ""<integer>"",
-    ""fieldID"": ""<integer>"",
-    ""isActive"": ""<boolean>"",
-    ""isDefault"": ""<boolean>"",
-    ""languageID"": ""<integer>"",
-    ""logo"": ""<string>"",
-    ""name"": ""<string>"",
-    ""nodeID"": ""<integer>"",
-    ""options"": [],
-    ""status"": ""<string>"",
-    ""styles"": []
+  "form": {
+    "anonymous": "<boolean>",
+    "companyID": "<integer>",
+    "fieldID": "<integer>",
+    "isActive": "<boolean>",
+    "isDefault": "<boolean>",
+    "languageID": "<integer>",
+    "logo": "<string>",
+    "name": "<string>",
+    "nodeID": "<integer>",
+    "options": [],
+    "status": "<string>",
+    "styles": []
   }
 }'
 ```"
@@ -2199,12 +2199,12 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/forms/{id}' \
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""ok"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "ok",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -2231,24 +2231,24 @@ Error: Could not get a response from the API.
 ## Request body
 ```json
 {
-  ""form_field"": {
-    ""formID"": ""<integer>"",
-    ""type"": ""<string>"",
-    ""answers"": [
+  "form_field": {
+    "formID": "<integer>",
+    "type": "<string>",
+    "answers": [
       {
-        ""<answer properties>""
+        "<answer properties>"
       }
     ],
-    ""fieldID"": ""<integer>"",
-    ""options"": [
+    "fieldID": "<integer>",
+    "options": [
       {
-        ""<option properties>""
+        "<option properties>"
       }
     ],
-    ""question"": ""<string>"",
-    ""styles"": [
+    "question": "<string>",
+    "styles": [
       {
-        ""<style properties>""
+        "<style properties>"
       }
     ]
   }
@@ -2257,61 +2257,61 @@ Error: Could not get a response from the API.
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""FormField domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""answers"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""$ref"": ""#/definitions/domain.AnswerOption""
+  "description": "FormField domain model",
+  "type": "object",
+  "properties": {
+    "answers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/domain.AnswerOption"
       }
     },
-    ""createdAt"": {
-      ""type"": ""string""
+    "createdAt": {
+      "type": "string"
     },
-    ""fieldID"": {
-      ""type"": ""integer""
+    "fieldID": {
+      "type": "integer"
     },
-    ""formID"": {
-      ""type"": ""integer""
+    "formID": {
+      "type": "integer"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""options"": {
-      ""type"": ""array"",
-      ""items"": {
+    "options": {
+      "type": "array",
+      "items": {
         {
-          ""key"": {
-            ""type"": ""string""
+          "key": {
+            "type": "string"
           },
-          ""value"": {
-            ""type"": ""string""
+          "value": {
+            "type": "string"
           }
         }
       }
     },
-    ""question"": {
-      ""type"": ""string""
+    "question": {
+      "type": "string"
     },
-    ""styles"": {
-      ""type"": ""array"",
-      ""items"": {
+    "styles": {
+      "type": "array",
+      "items": {
         {
-          ""key"": {
-            ""type"": ""string""
+          "key": {
+            "type": "string"
           },
-          ""value"": {
-            ""type"": ""string""
+          "value": {
+            "type": "string"
           }
         }
       }
     },
-    ""type"": {
-      ""type"": ""string""
+    "type": {
+      "type": "string"
     },
-    ""updatedAt"": {
-      ""type"": ""string""
+    "updatedAt": {
+      "type": "string"
     }
   }
 }
@@ -2322,24 +2322,24 @@ curl --location --request POST '''https://api.voicer.software/api/v1/form_fields
 --header '''Content-Type: application/json''' \
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token'''  --data '''{
-      ""form_field"": {
-        ""formID"": ""<integer>"",
-        ""type"": ""<string>"",
-        ""answers"": [
+      "form_field": {
+        "formID": "<integer>",
+        "type": "<string>",
+        "answers": [
           {
-            ""<answer properties>""
+            "<answer properties>"
           }
         ],
-        ""fieldID"": ""<integer>"",
-        ""options"": [
+        "fieldID": "<integer>",
+        "options": [
           {
-            ""<option properties>""
+            "<option properties>"
           }
         ],
-        ""question"": ""<string>"",
-        ""styles"": [
+        "question": "<string>",
+        "styles": [
           {
-            ""<style properties>""
+            "<style properties>"
           }
         ]
       }
@@ -2359,57 +2359,57 @@ curl --location --request POST '''https://api.voicer.software/api/v1/form_fields
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""FormField domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""answers"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""$ref"": ""#/definitions/domain.AnswerOption""
+  "description": "FormField domain model",
+  "type": "object",
+  "properties": {
+    "answers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/domain.AnswerOption"
       }
     },
-    ""createdAt"": {
-      ""type"": ""string""
+    "createdAt": {
+      "type": "string"
     },
-    ""fieldID"": {
-      ""type"": ""integer""
+    "fieldID": {
+      "type": "integer"
     },
-    ""formID"": {
-      ""type"": ""integer""
+    "formID": {
+      "type": "integer"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""options"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""key"": {
-          ""type"": ""string""
+    "options": {
+      "type": "array",
+      "items": {
+        "key": {
+          "type": "string"
         },
-        ""value"": {
-          ""type"": ""string""
+        "value": {
+          "type": "string"
         }
       }
     },
-    ""question"": {
-      ""type"": ""string""
+    "question": {
+      "type": "string"
     },
-    ""styles"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""key"": {
-          ""type"": ""string""
+    "styles": {
+      "type": "array",
+      "items": {
+        "key": {
+          "type": "string"
         },
-        ""value"": {
-          ""type"": ""string""
+        "value": {
+          "type": "string"
         }
       }
     },
-    ""type"": {
-      ""type"": ""string""
+    "type": {
+      "type": "string"
     },
-    ""updatedAt"": {
-      ""type"": ""string""
+    "updatedAt": {
+      "type": "string"
     }
   }
 }
@@ -2422,7 +2422,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/form_fields/
 --header '''Authorization: Bearer Token''' \
 --data '''
 {
-  ""id"": <integer>
+  "id": <integer>
 }'''
 ```"
 "# Method update form_field
@@ -2440,23 +2440,23 @@ curl --location --request GET '''https://api.voicer.software/api/v1/form_fields/
 ## Request body
 ```json
 {
-  ""answers"": [<array_of_answers>],
-  ""fieldID"": <integer>,
-  ""options"": [<array_of_options>],
-  ""question"": ""<string>"",
-  ""styles"": [<array_of_styles>],
-  ""type"": ""<string>""
+  "answers": [<array_of_answers>],
+  "fieldID": <integer>,
+  "options": [<array_of_options>],
+  "question": "<string>",
+  "styles": [<array_of_styles>],
+  "type": "<string>"
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""ok"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "ok",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -2469,12 +2469,12 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/form_fields/
 --header '''Authorization: Bearer Token``` ''' \
 --data '''
 {
-  ""answers"": [<array_of_answers>],
-  ""fieldID"": <integer>,
-  ""options"": [<array_of_options>],
-  ""question"": ""<string>"",
-  ""styles"": [<array_of_styles>],
-  ""type"": ""<string>""
+  "answers": [<array_of_answers>],
+  "fieldID": <integer>,
+  "options": [<array_of_options>],
+  "question": "<string>",
+  "styles": [<array_of_styles>],
+  "type": "<string>"
 }
 '''
 ```
@@ -2494,12 +2494,12 @@ Replace `Token` with the actual bearer token value and `{id}` with the actual ID
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""ok"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "ok",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -2525,59 +2525,59 @@ curl --location --request DELETE '''https://api.voicer.software/api/v1/form_fiel
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""FormField domain model"",
-  ""type"": ""array"",
-  ""items"": {
-    ""type"": ""object"",
-    ""properties"": {
-      ""answers"": {
-        ""type"": ""array"",
-        ""items"": {
-          ""$ref"": ""#/definitions/domain.AnswerOption""
+  "description": "FormField domain model",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "answers": {
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/domain.AnswerOption"
         }
       },
-      ""createdAt"": {
-        ""type"": ""string""
+      "createdAt": {
+        "type": "string"
       },
-      ""fieldID"": {
-        ""type"": ""integer""
+      "fieldID": {
+        "type": "integer"
       },
-      ""formID"": {
-        ""type"": ""integer""
+      "formID": {
+        "type": "integer"
       },
-      ""id"": {
-        ""type"": ""integer""
+      "id": {
+        "type": "integer"
       },
-      ""options"": {
-        ""type"": ""array"",
-        ""items"": {
-          ""key"": {
-            ""type"": ""string""
+      "options": {
+        "type": "array",
+        "items": {
+          "key": {
+            "type": "string"
           },
-          ""value"": {
-            ""type"": ""string""
+          "value": {
+            "type": "string"
           }
         }
       },
-      ""question"": {
-        ""type"": ""string""
+      "question": {
+        "type": "string"
       },
-      ""styles"": {
-        ""type"": ""array"",
-        ""items"": {
-          ""key"": {
-            ""type"": ""string""
+      "styles": {
+        "type": "array",
+        "items": {
+          "key": {
+            "type": "string"
           },
-          ""value"": {
-            ""type"": ""string""
+          "value": {
+            "type": "string"
           }
         }
       },
-      ""type"": {
-        ""type"": ""string""
+      "type": {
+        "type": "string"
       },
-      ""updatedAt"": {
-        ""type"": ""string""
+      "updatedAt": {
+        "type": "string"
       }
     }
   }
@@ -2613,18 +2613,18 @@ Error: Could not get a response from the API.
 ## Request body
 ```json
 {
-  ""name"": ""<string>""
+  "name": "<string>"
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""OK"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "OK",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -2636,7 +2636,7 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/groups/{id}' \
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token' \
 --data-raw '{
-  ""name"": ""<string>""
+  "name": "<string>"
 }'```"
 "# Method delete group
 ### Delete group
@@ -2653,12 +2653,12 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/groups/{id}' \
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""OK"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "OK",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -2690,12 +2690,12 @@ Error: Could not get a response from the API.
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""View provided"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "View provided",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -2725,12 +2725,12 @@ curl --location --request POST '''https://api.voicer.software/api/v1/groups/{id}
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""View removed"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "View removed",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -2758,12 +2758,12 @@ Error: Could not get a response from the API.
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""User removed"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "User removed",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -2785,12 +2785,12 @@ curl --location --request DELETE '''https://api.voicer.software/api/v1/groups/{i
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""ok"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "ok",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -2811,19 +2811,19 @@ curl --location --request GET 'https://api.voicer.software/api/v1/health_checks'
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""list"",
-  ""type"": ""array"",
-  ""items"": {
-    ""type"": ""object"",
-    ""properties"": {
-      ""icon"": {
-        ""type"": ""string""
+  "description": "list",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "icon": {
+        "type": "string"
       },
-      ""id"": {
-        ""type"": ""integer""
+      "id": {
+        "type": "integer"
       },
-      ""name"": {
-        ""type"": ""string""
+      "name": {
+        "type": "string"
       }
     }
   }
@@ -2845,18 +2845,18 @@ Error: Could not get a response from the API.
 ## Request body
 ```json
 {
-    ""name"": ""<string>""
+    "name": "<string>"
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""OK"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "OK",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -2868,7 +2868,7 @@ curl --location --request DELETE 'https://api.voicer.software/api/v1/languages' 
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token' \
 --data '{
-    ""name"": ""<string>""
+    "name": "<string>"
 }'```"
 "# Method Create Metadata
 ### Create metadata
@@ -2881,41 +2881,41 @@ curl --location --request DELETE 'https://api.voicer.software/api/v1/languages' 
 ## Path parameters
 | Parameter | Type     | Required  |  Description                |
 | :------- | :------: |  :------: |:--------------------------------- |
-| `entity`| string | Yes |                       Type of entity (""companies"" or ""nodes"") |
+| `entity`| string | Yes |                       Type of entity ("companies" or "nodes") |
 ## Request body
 ```json
 {
-  ""metadata"": {
-    ""key"": ""<string>"",
-    ""parentID"": <integer>,
-    ""value"": ""<string>""
+  "metadata": {
+    "key": "<string>",
+    "parentID": <integer>,
+    "value": "<string>"
   },
-  ""entity"": ""<string>""
+  "entity": "<string>"
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Metadata domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""createdAt"": {
-      ""type"": ""string""
+  "description": "Metadata domain model",
+  "type": "object",
+  "properties": {
+    "createdAt": {
+      "type": "string"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""key"": {
-      ""type"": ""string""
+    "key": {
+      "type": "string"
     },
-    ""parentID"": {
-      ""type"": ""integer""
+    "parentID": {
+      "type": "integer"
     },
-    ""updatedAt"": {
-      ""type"": ""string""
+    "updatedAt": {
+      "type": "string"
     },
-    ""value"": {
-      ""type"": ""string""
+    "value": {
+      "type": "string"
     }
   }
 }
@@ -2927,12 +2927,12 @@ curl --location --request POST 'https://api.voicer.software/api/v1/metadata/{ent
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token' \
 --data '{
-  ""metadata"": {
-    ""key"": ""<string>"",
-    ""parentID"": <integer>,
-    ""value"": ""<string>""
+  "metadata": {
+    "key": "<string>",
+    "parentID": <integer>,
+    "value": "<string>"
   },
-  ""entity"": ""<string>""
+  "entity": "<string>"
 }'```
 Replace `<string>` with the actual values and `<integer>` with the actual integer value."
 "# Method get entity metadata by ID
@@ -2951,26 +2951,26 @@ Replace `<string>` with the actual values and `<integer>` with the actual intege
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Metadata domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""createdAt"": {
-      ""type"": ""string""
+  "description": "Metadata domain model",
+  "type": "object",
+  "properties": {
+    "createdAt": {
+      "type": "string"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""key"": {
-      ""type"": ""string""
+    "key": {
+      "type": "string"
     },
-    ""parentID"": {
-      ""type"": ""integer""
+    "parentID": {
+      "type": "integer"
     },
-    ""updatedAt"": {
-      ""type"": ""string""
+    "updatedAt": {
+      "type": "string"
     },
-    ""value"": {
-      ""type"": ""string""
+    "value": {
+      "type": "string"
     }
   }
 }
@@ -2998,20 +2998,20 @@ curl --location --request GET '''https://api.voicer.software/api/v1/metadata/{en
 ## Request body
 ```json
 {
-  ""metadata"": {
-    ""value"": ""<string>""
+  "metadata": {
+    "value": "<string>"
   }
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""ok"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "ok",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -3023,8 +3023,8 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/metadata/{enti
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token' \
 --data-raw '{
-    ""metadata"": {
-        ""value"": ""<string>""
+    "metadata": {
+        "value": "<string>"
     }
 }'
 ```"
@@ -3046,12 +3046,12 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/metadata/{enti
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""ok"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "ok",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -3082,28 +3082,28 @@ curl --location --request DELETE '''https://api.voicer.software/api/v1/metadata/
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Metadata domain model"",
-  ""type"": ""array"",
-  ""items"": {
-    ""type"": ""object"",
-    ""properties"": {
-      ""createdAt"": {
-        ""type"": ""string""
+  "description": "Metadata domain model",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "createdAt": {
+        "type": "string"
       },
-      ""id"": {
-        ""type"": ""integer""
+      "id": {
+        "type": "integer"
       },
-      ""key"": {
-        ""type"": ""string""
+      "key": {
+        "type": "string"
       },
-      ""parentID"": {
-        ""type"": ""integer""
+      "parentID": {
+        "type": "integer"
       },
-      ""updatedAt"": {
-        ""type"": ""string""
+      "updatedAt": {
+        "type": "string"
       },
-      ""value"": {
-        ""type"": ""string""
+      "value": {
+        "type": "string"
       }
     }
   }
@@ -3131,61 +3131,61 @@ curl --location --request GET '''https://api.voicer.software/api/v1/{entity}/{id
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Node domain model"",
-  ""type"": ""array"",
-  ""items"": {
-    ""type"": ""object"",
-    ""properties"": {
-      ""children"": {
-        ""type"": ""array"",
-        ""items"": {
-          ""$ref"": ""#/definitions/domain.Node""
+  "description": "Node domain model",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "children": {
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/domain.Node"
         }
       },
-      ""code"": {
-        ""type"": ""string""
+      "code": {
+        "type": "string"
       },
-      ""companyID"": {
-        ""type"": ""integer""
+      "companyID": {
+        "type": "integer"
       },
-      ""createdAt"": {
-        ""type"": ""string""
+      "createdAt": {
+        "type": "string"
       },
-      ""enableOverdue"": {
-        ""type"": ""boolean""
+      "enableOverdue": {
+        "type": "boolean"
       },
-      ""id"": {
-        ""type"": ""integer""
+      "id": {
+        "type": "integer"
       },
-      ""metadata"": {
-        ""type"": ""array"",
-        ""items"": {
-          ""$ref"": ""#/definitions/domain.Metadata""
+      "metadata": {
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/domain.Metadata"
         }
       },
-      ""name"": {
-        ""type"": ""string""
+      "name": {
+        "type": "string"
       },
-      ""parentID"": {
-        ""type"": ""integer""
+      "parentID": {
+        "type": "integer"
       },
-      ""referencedID"": {
-        ""type"": ""integer""
+      "referencedID": {
+        "type": "integer"
       },
-      ""responsibleID"": {
-        ""type"": ""integer""
+      "responsibleID": {
+        "type": "integer"
       },
-      ""slug"": {
-        ""type"": ""string""
+      "slug": {
+        "type": "string"
       },
-      ""sourceID"": {
-        ""type"": ""integer""
+      "sourceID": {
+        "type": "integer"
       },
-      ""updatedAt"": {
-        ""type"": ""string""
+      "updatedAt": {
+        "type": "string"
       },
-      ""useDetectLanguage"": {
-        ""type"": ""boolean""
+      "useDetectLanguage": {
+        "type": "boolean"
       }
     }
   }
@@ -3210,16 +3210,16 @@ curl --location --request GET '''https://api.voicer.software/api/v1/companies/{i
 ## Request body
 ```json
 {
-  ""node"": {
-    ""code"": ""string"",
-    ""companyID"": 0,
-    ""enableOverdue"": true,
-    ""name"": ""string"",
-    ""parentID"": 0,
-    ""referencedID"": 0,
-    ""responsibleID"": 0,
-    ""sourceID"": 0,
-    ""useDetectLanguage"": true
+  "node": {
+    "code": "string",
+    "companyID": 0,
+    "enableOverdue": true,
+    "name": "string",
+    "parentID": 0,
+    "referencedID": 0,
+    "responsibleID": 0,
+    "sourceID": 0,
+    "useDetectLanguage": true
   }
 }
 ```
@@ -3234,16 +3234,16 @@ curl --location --request POST 'https://api.voicer.software/api/v1/nodes' \
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token`' \
 --data-raw '{
-  ""node"": {
-    ""code"": ""string"",
-    ""companyID"": 0,
-    ""enableOverdue"": true,
-    ""name"": ""string"",
-    ""parentID"": 0,
-    ""referencedID"": 0,
-    ""responsibleID"": 0,
-    ""sourceID"": 0,
-    ""useDetectLanguage"": true
+  "node": {
+    "code": "string",
+    "companyID": 0,
+    "enableOverdue": true,
+    "name": "string",
+    "parentID": 0,
+    "referencedID": 0,
+    "responsibleID": 0,
+    "sourceID": 0,
+    "useDetectLanguage": true
   }
 }'```"
 "# Method get Node by id
@@ -3261,59 +3261,59 @@ curl --location --request POST 'https://api.voicer.software/api/v1/nodes' \
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Node domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""children"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""$ref"": ""#/definitions/domain.Node""
+  "description": "Node domain model",
+  "type": "object",
+  "properties": {
+    "children": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/domain.Node"
       }
     },
-    ""code"": {
-      ""type"": ""string""
+    "code": {
+      "type": "string"
     },
-    ""companyID"": {
-      ""type"": ""integer""
+    "companyID": {
+      "type": "integer"
     },
-    ""createdAt"": {
-      ""type"": ""string""
+    "createdAt": {
+      "type": "string"
     },
-    ""enableOverdue"": {
-      ""type"": ""boolean""
+    "enableOverdue": {
+      "type": "boolean"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""metadata"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""$ref"": ""#/definitions/domain.Metadata""
+    "metadata": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/domain.Metadata"
       }
     },
-    ""name"": {
-      ""type"": ""string""
+    "name": {
+      "type": "string"
     },
-    ""parentID"": {
-      ""type"": ""integer""
+    "parentID": {
+      "type": "integer"
     },
-    ""referencedID"": {
-      ""type"": ""integer""
+    "referencedID": {
+      "type": "integer"
     },
-    ""responsibleID"": {
-      ""type"": ""integer""
+    "responsibleID": {
+      "type": "integer"
     },
-    ""slug"": {
-      ""type"": ""string""
+    "slug": {
+      "type": "string"
     },
-    ""sourceID"": {
-      ""type"": ""integer""
+    "sourceID": {
+      "type": "integer"
     },
-    ""updatedAt"": {
-      ""type"": ""string""
+    "updatedAt": {
+      "type": "string"
     },
-    ""useDetectLanguage"": {
-      ""type"": ""boolean""
+    "useDetectLanguage": {
+      "type": "boolean"
     }
   }
 }
@@ -3340,24 +3340,24 @@ curl --location --request GET '''https://api.voicer.software/api/v1/nodes/{id}''
 ## Request body
 ```json
 {
-  ""enableOverdue"": ""<boolean>"",
-  ""name"": ""<string>"",
-  ""parentID"": ""<integer>"",
-  ""referencedID"": ""<integer>"",
-  ""responsibleID"": ""<integer>"",
-  ""sourceID"": ""<integer>"",
-  ""useDetectLanguage"": ""<boolean>""
+  "enableOverdue": "<boolean>",
+  "name": "<string>",
+  "parentID": "<integer>",
+  "referencedID": "<integer>",
+  "responsibleID": "<integer>",
+  "sourceID": "<integer>",
+  "useDetectLanguage": "<boolean>"
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""ok"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "ok",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -3391,12 +3391,12 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/nodes/{id}''
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""ok"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "ok",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -3428,59 +3428,59 @@ Accept: application/json
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Node domain model"",
-  ""Type"": ""object"",
-  ""Properties"": {
-    ""children"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""$ref"": ""#/definitions/domain.Node""
+  "description": "Node domain model",
+  "Type": "object",
+  "Properties": {
+    "children": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/domain.Node"
       }
     },
-    ""code"": {
-      ""type"": ""string""
+    "code": {
+      "type": "string"
     },
-    ""companyID"": {
-      ""type"": ""integer""
+    "companyID": {
+      "type": "integer"
     },
-    ""createdAt"": {
-      ""type"": ""string""
+    "createdAt": {
+      "type": "string"
     },
-    ""enableOverdue"": {
-      ""type"": ""boolean""
+    "enableOverdue": {
+      "type": "boolean"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""metadata"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""$ref"": ""#/definitions/domain.Metadata""
+    "metadata": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/domain.Metadata"
       }
     },
-    ""name"": {
-      ""type"": ""string""
+    "name": {
+      "type": "string"
     },
-    ""parentID"": {
-      ""type"": ""integer""
+    "parentID": {
+      "type": "integer"
     },
-    ""referencedID"": {
-      ""type"": ""integer""
+    "referencedID": {
+      "type": "integer"
     },
-    ""responsibleID"": {
-      ""type"": ""integer""
+    "responsibleID": {
+      "type": "integer"
     },
-    ""slug"": {
-      ""type"": ""string""
+    "slug": {
+      "type": "string"
     },
-    ""sourceID"": {
-      ""type"": ""integer""
+    "sourceID": {
+      "type": "integer"
     },
-    ""updatedAt"": {
-      ""type"": ""string""
+    "updatedAt": {
+      "type": "string"
     },
-    ""useDetectLanguage"": {
-      ""type"": ""boolean""
+    "useDetectLanguage": {
+      "type": "boolean"
     }
   }
 }
@@ -3519,19 +3519,19 @@ If you pass null to responsibleID in body it will remove responsible from node.
 ## Request body
 ```json
 {
-  ""responsibleID"": <integer>,
-  ""type"": ""<string>""
+  "responsibleID": <integer>,
+  "type": "<string>"
 }
 ```
 
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""OK"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""nodesUpdated"": {
-      ""type"": ""integer""
+  "description": "OK",
+  "type": "object",
+  "properties": {
+    "nodesUpdated": {
+      "type": "integer"
     }
   }
 }
@@ -3566,49 +3566,49 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/nodes/{id}/r
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Review model"",
-  ""type"": ""array"",
-  ""items"": {
-    ""type"": ""object"",
-    ""properties"": {
-      ""answers"": {
-        ""type"": ""array"",
-        ""items"": {
-          ""$ref"": ""#/definitions/domain.ClientAnswer""
+  "description": "Review model",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "answers": {
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/domain.ClientAnswer"
         }
       },
-      ""comment"": {
-        ""type"": ""string""
+      "comment": {
+        "type": "string"
       },
-      ""created_at"": {
-        ""type"": ""string""
+      "created_at": {
+        "type": "string"
       },
-      ""formID"": {
-        ""type"": ""integer""
+      "formID": {
+        "type": "integer"
       },
-      ""id"": {
-        ""type"": ""integer""
+      "id": {
+        "type": "integer"
       },
-      ""sessionID"": {
-        ""type"": ""string""
+      "sessionID": {
+        "type": "string"
       },
-      ""status"": {
-        ""$ref"": ""#/definitions/domain.ClientStatus""
+      "status": {
+        "$ref": "#/definitions/domain.ClientStatus"
       },
-      ""ticket_number"": {
-        ""type"": ""integer""
+      "ticket_number": {
+        "type": "integer"
       },
-      ""timestamps"": {
-        ""type"": ""array"",
-        ""items"": {
-          ""$ref"": ""#/definitions/domain.Timestamp""
+      "timestamps": {
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/domain.Timestamp"
         }
       },
-      ""updated_at"": {
-        ""type"": ""string""
+      "updated_at": {
+        "type": "string"
       },
-      ""was_overdue"": {
-        ""type"": ""boolean""
+      "was_overdue": {
+        "type": "boolean"
       }
     }
   }
@@ -3621,13 +3621,13 @@ curl --location --request GET '''https://api.voicer.software/api/v1/reviews''' \
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token''' \
 --data '''{
-  ""limit"": <integer>,
-  ""offset"": <integer>,
-  ""form_id"": <integer>,
-  ""node_id"": <integer>,
-  ""company_id"": <integer>,
-  ""from"": <string>,
-  ""to"": <string>
+  "limit": <integer>,
+  "offset": <integer>,
+  "form_id": <integer>,
+  "node_id": <integer>,
+  "company_id": <integer>,
+  "from": <string>,
+  "to": <string>
 }'''
 ```"
 "# Method POST reviews
@@ -3641,49 +3641,49 @@ Content-Type: application/json
 ## Request body
 ```json
 {
-  ""name"": ""review data"",
-  ""in"": ""body"",
-  ""required"": true,
-  ""type"": ""object"",
-  ""properties"": {
-    ""companyID"": {
-      ""type"": ""integer""
+  "name": "review data",
+  "in": "body",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "companyID": {
+      "type": "integer"
     },
-    ""contacts"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""$ref"": ""#/definitions/domain.ContactType""
+    "contacts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/domain.ContactType"
       }
     },
-    ""forms"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""type"": ""integer""
+    "forms": {
+      "type": "array",
+      "items": {
+        "type": "integer"
       }
     },
-    ""from"": {
-      ""type"": ""string""
+    "from": {
+      "type": "string"
     },
-    ""nodes"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""type"": ""integer""
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "integer"
       }
     },
-    ""sources"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""type"": ""integer""
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "integer"
       }
     },
-    ""statuses"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""$ref"": ""#/definitions/domain.ClientStatus""
+    "statuses": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/domain.ClientStatus"
       }
     },
-    ""to"": {
-      ""type"": ""string""
+    "to": {
+      "type": "string"
     }
   }
 }
@@ -3691,75 +3691,75 @@ Content-Type: application/json
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Review model"",
-  ""type"": ""array"",
-  ""items"": {
-    ""type"": ""object"",
-    ""properties"": {
-      ""answers"": {
-        ""type"": ""array"",
-        ""items"": {
-          ""$ref"": ""#/definitions/domain.ClientAnswer""
+  "description": "Review model",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "answers": {
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/domain.ClientAnswer"
         }
       },
-      ""comment"": {
-        ""type"": ""string""
+      "comment": {
+        "type": "string"
       },
-      ""contact"": {
-        ""type"": ""array"",
-        ""items"": {
-          ""$ref"": ""#/definitions/domain.ClientContact""
+      "contact": {
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/domain.ClientContact"
         }
       },
-      ""created_at"": {
-        ""type"": ""string""
+      "created_at": {
+        "type": "string"
       },
-      ""form"": {
-        ""$ref"": ""#/definitions/domain.Form""
+      "form": {
+        "$ref": "#/definitions/domain.Form"
       },
-      ""formFields"": {
-        ""type"": ""array"",
-        ""items"": {
-          ""$ref"": ""#/definitions/domain.FormField""
+      "formFields": {
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/domain.FormField"
         }
       },
-      ""formID"": {
-        ""type"": ""integer""
+      "formID": {
+        "type": "integer"
       },
-      ""id"": {
-        ""type"": ""integer""
+      "id": {
+        "type": "integer"
       },
-      ""node"": {
-        ""description"": ""Joined"",
-        ""allOf"": [
+      "node": {
+        "description": "Joined",
+        "allOf": [
           {
-            ""$ref"": ""#/definitions/domain.Node""
+            "$ref": "#/definitions/domain.Node"
           }
         ]
       },
-      ""sessionID"": {
-        ""type"": ""string""
+      "sessionID": {
+        "type": "string"
       },
-      ""source"": {
-        ""$ref"": ""#/definitions/domain.Source""
+      "source": {
+        "$ref": "#/definitions/domain.Source"
       },
-      ""status"": {
-        ""$ref"": ""#/definitions/domain.ClientStatus""
+      "status": {
+        "$ref": "#/definitions/domain.ClientStatus"
       },
-      ""ticket_number"": {
-        ""type"": ""integer""
+      "ticket_number": {
+        "type": "integer"
       },
-      ""timestamps"": {
-        ""type"": ""array"",
-        ""items"": {
-          ""$ref"": ""#/definitions/domain.Timestamp""
+      "timestamps": {
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/domain.Timestamp"
         }
       },
-      ""updated_at"": {
-        ""type"": ""string""
+      "updated_at": {
+        "type": "string"
       },
-      ""wasOverdue"": {
-        ""type"": ""boolean""
+      "wasOverdue": {
+        "type": "boolean"
       }
     }
   }
@@ -3772,14 +3772,14 @@ curl --location --request POST 'https://api.voicer.software/api/v1/reviews' \
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token' \
 --data-raw '{
-    ""companyID"": <integer>,
-    ""contacts"": [<ContactType>],
-    ""forms"": [<integer>],
-    ""from"": ""<string>"",
-    ""nodes"": [<integer>],
-    ""sources"": [<integer>],
-    ""statuses"": [<ClientStatus>],
-    ""to"": ""<string>""
+    "companyID": <integer>,
+    "contacts": [<ContactType>],
+    "forms": [<integer>],
+    "from": "<string>",
+    "nodes": [<integer>],
+    "sources": [<integer>],
+    "statuses": [<ClientStatus>],
+    "to": "<string>"
 }'```"
 Error: Could not get a response from the API.
 "# Method get Review by id
@@ -3797,47 +3797,47 @@ Error: Could not get a response from the API.
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Review model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""answers"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""$ref"": ""#/definitions/domain.ClientAnswer""
+  "description": "Review model",
+  "type": "object",
+  "properties": {
+    "answers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/domain.ClientAnswer"
       }
     },
-    ""comment"": {
-      ""type"": ""string""
+    "comment": {
+      "type": "string"
     },
-    ""created_at"": {
-      ""type"": ""string""
+    "created_at": {
+      "type": "string"
     },
-    ""formID"": {
-      ""type"": ""integer""
+    "formID": {
+      "type": "integer"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""sessionID"": {
-      ""type"": ""string""
+    "sessionID": {
+      "type": "string"
     },
-    ""status"": {
-      ""$ref"": ""#/definitions/domain.ClientStatus""
+    "status": {
+      "$ref": "#/definitions/domain.ClientStatus"
     },
-    ""ticket_number"": {
-      ""type"": ""integer""
+    "ticket_number": {
+      "type": "integer"
     },
-    ""timestamps"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""$ref"": ""#/definitions/domain.Timestamp""
+    "timestamps": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/domain.Timestamp"
       }
     },
-    ""updated_at"": {
-      ""type"": ""string""
+    "updated_at": {
+      "type": "string"
     },
-    ""was_overdue"": {
-      ""type"": ""boolean""
+    "was_overdue": {
+      "type": "boolean"
     }
   }
 }
@@ -3860,21 +3860,21 @@ Error: Could not get a response from the API.
 ## Request body
 ```json
 {
-  ""message"": {
-    ""data"": ""<string>"",
-    ""phone"": ""<string>""
+  "message": {
+    "data": "<string>",
+    "phone": "<string>"
   }
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""OK"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "OK",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -3885,8 +3885,8 @@ curl --location --request POST 'https://api.voicer.software/api/v1/sms' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer Token' \
 --data-raw '{
-  ""data"": ""<string>"",
-  ""phone"": ""<string>""
+  "data": "<string>",
+  "phone": "<string>"
 }'"
 "# Method send bulk SMS
 ### Send SMS without timezone to many
@@ -3900,21 +3900,21 @@ curl --location --request POST 'https://api.voicer.software/api/v1/sms' \
 ## Request body
 ```json
 {
-  ""message"": {
-    ""data"": ""<string>"",
-    ""phones"": [""<phone_number1>"", ""<phone_number2>""]
+  "message": {
+    "data": "<string>",
+    "phones": ["<phone_number1>", "<phone_number2>"]
   }
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""OK"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "OK",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -3926,9 +3926,9 @@ curl --location --request POST '''https://api.voicer.software/api/v1/sms/bulk'''
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token''' \
 --data '''{
-  ""message"": {
-    ""data"": ""<string>"",
-    ""phones"": [""<phone_number1>"", ""<phone_number2>""]
+  "message": {
+    "data": "<string>",
+    "phones": ["<phone_number1>", "<phone_number2>"]
   }
 }'''```"
 "# Method get sources by company id
@@ -3946,23 +3946,23 @@ curl --location --request POST '''https://api.voicer.software/api/v1/sms/bulk'''
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Source domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""companyID"": {
-      ""type"": ""integer""
+  "description": "Source domain model",
+  "type": "object",
+  "properties": {
+    "companyID": {
+      "type": "integer"
     },
-    ""created_at"": {
-      ""type"": ""string""
+    "created_at": {
+      "type": "string"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""name"": {
-      ""type"": ""string""
+    "name": {
+      "type": "string"
     },
-    ""updated_at"": {
-      ""type"": ""string""
+    "updated_at": {
+      "type": "string"
     }
   }
 }
@@ -3985,32 +3985,32 @@ Please note that you need to replace `{company_id}` with the actual company ID t
 ## Request body
 ```json
 {
-  ""source"": {
-    ""companyID"": <integer>,
-    ""name"": ""<string>""
+  "source": {
+    "companyID": <integer>,
+    "name": "<string>"
   }
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Source domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""companyID"": {
-      ""type"": ""integer""
+  "description": "Source domain model",
+  "type": "object",
+  "properties": {
+    "companyID": {
+      "type": "integer"
     },
-    ""created_at"": {
-      ""type"": ""string""
+    "created_at": {
+      "type": "string"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""name"": {
-      ""type"": ""string""
+    "name": {
+      "type": "string"
     },
-    ""updated_at"": {
-      ""type"": ""string""
+    "updated_at": {
+      "type": "string"
     }
   }
 }
@@ -4022,9 +4022,9 @@ curl --location --request POST '''https://api.voicer.software/api/v1/sources''' 
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token''' \
 --data '''{
-  ""source"": {
-    ""companyID"": <integer>,
-    ""name"": ""<string>""
+  "source": {
+    "companyID": <integer>,
+    "name": "<string>"
   }
 }'''"
 "# Method get Source by id
@@ -4042,23 +4042,23 @@ curl --location --request POST '''https://api.voicer.software/api/v1/sources''' 
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Source domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""companyID"": {
-      ""type"": ""integer""
+  "description": "Source domain model",
+  "type": "object",
+  "properties": {
+    "companyID": {
+      "type": "integer"
     },
-    ""created_at"": {
-      ""type"": ""string""
+    "created_at": {
+      "type": "string"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""name"": {
-      ""type"": ""string""
+    "name": {
+      "type": "string"
     },
-    ""updated_at"": {
-      ""type"": ""string""
+    "updated_at": {
+      "type": "string"
     }
   }
 }
@@ -4085,14 +4085,14 @@ curl --location --request GET '''https://api.voicer.software/api/v1/sources/{id}
 ## Request body
 ```json
 {
-  ""source"": {
-    ""companyID"": {
-      ""type"": ""integer"",
-      ""required"" : true
+  "source": {
+    "companyID": {
+      "type": "integer",
+      "required" : true
     },
-    ""name"": {
-      ""type"": ""string"",
-      ""maxLength"": 255
+    "name": {
+      "type": "string",
+      "maxLength": 255
     }
   }
 }
@@ -4100,23 +4100,23 @@ curl --location --request GET '''https://api.voicer.software/api/v1/sources/{id}
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Source domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""companyID"": {
-      ""type"": ""integer""
+  "description": "Source domain model",
+  "type": "object",
+  "properties": {
+    "companyID": {
+      "type": "integer"
     },
-    ""created_at"": {
-      ""type"": ""string""
+    "created_at": {
+      "type": "string"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""name"": {
-      ""type"": ""string""
+    "name": {
+      "type": "string"
     },
-    ""updated_at"": {
-      ""type"": ""string""
+    "updated_at": {
+      "type": "string"
     }
   }
 }
@@ -4146,23 +4146,23 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/sources/{id}
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Source domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""companyID"": {
-      ""type"": ""integer""
+  "description": "Source domain model",
+  "type": "object",
+  "properties": {
+    "companyID": {
+      "type": "integer"
     },
-    ""created_at"": {
-      ""type"": ""string""
+    "created_at": {
+      "type": "string"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""name"": {
-      ""type"": ""string""
+    "name": {
+      "type": "string"
     },
-    ""updated_at"": {
-      ""type"": ""string""
+    "updated_at": {
+      "type": "string"
     }
   }
 }
@@ -4188,25 +4188,25 @@ curl --location --request DELETE 'https://api.voicer.software/api/v1/sources/{id
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""TicketStatus domain model"",
-  ""type"": ""array"",
-  ""items"": {
-    ""type"": ""object"",
-    ""properties"": {
-      ""company_id"": {
-        ""type"": ""integer""
+  "description": "TicketStatus domain model",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "company_id": {
+        "type": "integer"
       },
-      ""created_at"": {
-        ""type"": ""string""
+      "created_at": {
+        "type": "string"
       },
-      ""id"": {
-        ""type"": ""integer""
+      "id": {
+        "type": "integer"
       },
-      ""name"": {
-        ""type"": ""string""
+      "name": {
+        "type": "string"
       },
-      ""updated_at"": {
-        ""type"": ""string""
+      "updated_at": {
+        "type": "string"
       }
     }
   }
@@ -4219,7 +4219,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/companies/{i
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token''' \
 --data '''{
-  ""id"": <integer>
+  "id": <integer>
 }'''```"
 "# Method create ticket
 ### Create ticket
@@ -4236,40 +4236,40 @@ curl --location --request GET '''https://api.voicer.software/api/v1/companies/{i
 ## Request body
 ```json
 {
- ""ticket"": {
-   ""comment"": """",
-   ""name"": """",
-   ""node_id"": 0,
-   ""priority"": {
-     ""value"": """"
+ "ticket": {
+   "comment": "",
+   "name": "",
+   "node_id": 0,
+   "priority": {
+     "value": ""
    },
-   ""responsible_id"": 0,
-   ""review_id"": 0,
-   ""status_id"": 0,
-   ""type_id"": 0
+   "responsible_id": 0,
+   "review_id": 0,
+   "status_id": 0,
+   "type_id": 0
  }
  }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""TicketStatus domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""company_id"": {
-      ""type"": ""integer""
+  "description": "TicketStatus domain model",
+  "type": "object",
+  "properties": {
+    "company_id": {
+      "type": "integer"
     },
-    ""created_at"": {
-      ""type"": ""string""
+    "created_at": {
+      "type": "string"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""name"": {
-      ""type"": ""string""
+    "name": {
+      "type": "string"
     },
-    ""updated_at"": {
-      ""type"": ""string""
+    "updated_at": {
+      "type": "string"
     }
   }
 }
@@ -4281,17 +4281,17 @@ curl --location --request POST 'https://api.voicer.software/api/v1/companies/{id
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token' \
 --data-raw '{
-  ""ticket"": {
-    ""comment"": """",
-    ""name"": """",
-    ""node_id"": 0,
-    ""priority"": {
-      ""value"": """"
+  "ticket": {
+    "comment": "",
+    "name": "",
+    "node_id": 0,
+    "priority": {
+      "value": ""
     },
-    ""responsible_id"": 0,
-    ""review_id"": 0,
-    ""status_id"": 0,
-    ""type_id"": 0
+    "responsible_id": 0,
+    "review_id": 0,
+    "status_id": 0,
+    "type_id": 0
   }
 }'```"
 "# Method get companies ticket types
@@ -4309,28 +4309,28 @@ curl --location --request POST 'https://api.voicer.software/api/v1/companies/{id
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""TicketType domain model"",
-  ""type"": ""array"",
-  ""items"": {
-    ""type"": ""object"",
-    ""properties"": {
-      ""company_id"": {
-        ""type"": ""integer""
+  "description": "TicketType domain model",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "company_id": {
+        "type": "integer"
       },
-      ""created_at"": {
-        ""type"": ""string""
+      "created_at": {
+        "type": "string"
       },
-      ""id"": {
-        ""type"": ""integer""
+      "id": {
+        "type": "integer"
       },
-      ""img"": {
-        ""type"": ""string""
+      "img": {
+        "type": "string"
       },
-      ""name"": {
-        ""type"": ""string""
+      "name": {
+        "type": "string"
       },
-      ""updated_at"": {
-        ""type"": ""string""
+      "updated_at": {
+        "type": "string"
       }
     }
   }
@@ -4360,49 +4360,49 @@ Error: Could not get a response from the API.
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Ticket domain model"",
-  ""type"": ""array"",
-  ""items"": {
-    ""type"": ""object"",
-    ""properties"": {
-      ""comment"": {
-        ""type"": ""string""
+  "description": "Ticket domain model",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "comment": {
+        "type": "string"
       },
-      ""company_id"": {
-        ""type"": ""integer""
+      "company_id": {
+        "type": "integer"
       },
-      ""created_at"": {
-        ""type"": ""string""
+      "created_at": {
+        "type": "string"
       },
-      ""id"": {
-        ""type"": ""integer""
+      "id": {
+        "type": "integer"
       },
-      ""name"": {
-        ""type"": ""string""
+      "name": {
+        "type": "string"
       },
-      ""node_id"": {
-        ""type"": ""integer""
+      "node_id": {
+        "type": "integer"
       },
-      ""priority"": {
-        ""$ref"": ""#/definitions/domain.PriorityType""
+      "priority": {
+        "$ref": "#/definitions/domain.PriorityType"
       },
-      ""responsible_id"": {
-        ""type"": ""integer""
+      "responsible_id": {
+        "type": "integer"
       },
-      ""review_id"": {
-        ""type"": ""integer""
+      "review_id": {
+        "type": "integer"
       },
-      ""status_id"": {
-        ""type"": ""integer""
+      "status_id": {
+        "type": "integer"
       },
-      ""type_id"": {
-        ""type"": ""integer""
+      "type_id": {
+        "type": "integer"
       },
-      ""updated_at"": {
-        ""type"": ""string""
+      "updated_at": {
+        "type": "string"
       },
-      ""user_id"": {
-        ""type"": ""integer""
+      "user_id": {
+        "type": "integer"
       }
     }
   }
@@ -4430,63 +4430,63 @@ curl --location --request GET '''https://api.voicer.software/api/v1/companies/{i
 ## Request body
 ```json
 {
-  ""ticket"": {
-    ""comment"": ""<string>"",
-    ""name"": ""<string>"",
-    ""node_id"": <integer>,
-    ""priority"": ""<string>"",
-    ""responsible_id"": <integer>,
-    ""review_id"": <integer>,
-    ""status_id"": <integer>,
-    ""type_id"": <integer>
+  "ticket": {
+    "comment": "<string>",
+    "name": "<string>",
+    "node_id": <integer>,
+    "priority": "<string>",
+    "responsible_id": <integer>,
+    "review_id": <integer>,
+    "status_id": <integer>,
+    "type_id": <integer>
   },
-  ""id"": <integer>
+  "id": <integer>
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Ticket domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""comment"": {
-      ""type"": ""string""
+  "description": "Ticket domain model",
+  "type": "object",
+  "properties": {
+    "comment": {
+      "type": "string"
     },
-    ""company_id"": {
-      ""type"": ""integer""
+    "company_id": {
+      "type": "integer"
     },
-    ""created_at"": {
-      ""type"": ""string""
+    "created_at": {
+      "type": "string"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""name"": {
-      ""type"": ""string""
+    "name": {
+      "type": "string"
     },
-    ""node_id"": {
-      ""type"": ""integer""
+    "node_id": {
+      "type": "integer"
     },
-    ""priority"": {
-      ""$ref"": ""#/definitions/domain.PriorityType""
+    "priority": {
+      "$ref": "#/definitions/domain.PriorityType"
     },
-    ""responsible_id"": {
-      ""type"": ""integer""
+    "responsible_id": {
+      "type": "integer"
     },
-    ""review_id"": {
-      ""type"": ""integer""
+    "review_id": {
+      "type": "integer"
     },
-    ""status_id"": {
-      ""type"": ""integer""
+    "status_id": {
+      "type": "integer"
     },
-    ""type_id"": {
-      ""type"": ""integer""
+    "type_id": {
+      "type": "integer"
     },
-    ""updated_at"": {
-      ""type"": ""string""
+    "updated_at": {
+      "type": "string"
     },
-    ""user_id"": {
-      ""type"": ""integer""
+    "user_id": {
+      "type": "integer"
     }
   }
 }
@@ -4498,17 +4498,17 @@ curl --location --request POST 'https://api.voicer.software/api/v1/companies/{id
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token' \
 --data-raw '{
-  ""ticket"": {
-    ""comment"": ""<string>"",
-    ""name"": ""<string>"",
-    ""node_id"": <integer>,
-    ""priority"": ""<string>"",
-    ""responsible_id"": <integer>,
-    ""review_id"": <integer>,
-    ""status_id"": <integer>,
-    ""type_id"": <integer>
+  "ticket": {
+    "comment": "<string>",
+    "name": "<string>",
+    "node_id": <integer>,
+    "priority": "<string>",
+    "responsible_id": <integer>,
+    "review_id": <integer>,
+    "status_id": <integer>,
+    "type_id": <integer>
   },
-  ""id"": <integer>
+  "id": <integer>
 }'```"
 Error: Could not get a response from the API.
 "# Method get ticket status by id
@@ -4526,23 +4526,23 @@ Error: Could not get a response from the API.
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""TicketStatus domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""company_id"": {
-      ""type"": ""integer""
+  "description": "TicketStatus domain model",
+  "type": "object",
+  "properties": {
+    "company_id": {
+      "type": "integer"
     },
-    ""created_at"": {
-      ""type"": ""string""
+    "created_at": {
+      "type": "string"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""name"": {
-      ""type"": ""string""
+    "name": {
+      "type": "string"
     },
-    ""updated_at"": {
-      ""type"": ""string""
+    "updated_at": {
+      "type": "string"
     }
   }
 }
@@ -4574,25 +4574,25 @@ Replace `{id}` with the actual value of the ticket status ID you want to retriev
 ## Request body
 ```json
 {
-  ""comment"": ""<string>"",
-  ""name"": ""<string>"",
-  ""node_id"": <integer>,
-  ""priority"": ""<string>"",
-  ""responsible_id"": <integer>,
-  ""review_id"": <integer>,
-  ""status_id"": <integer>,
-  ""type_id"": <integer>
+  "comment": "<string>",
+  "name": "<string>",
+  "node_id": <integer>,
+  "priority": "<string>",
+  "responsible_id": <integer>,
+  "review_id": <integer>,
+  "status_id": <integer>,
+  "type_id": <integer>
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""ok"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "ok",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -4604,14 +4604,14 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/ticket_statuse
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token' \
 --data-raw '{
-  ""comment"": ""<string>"",
-  ""name"": ""<string>"",
-  ""node_id"": <integer>,
-  ""priority"": ""<string>"",
-  ""responsible_id"": <integer>,
-  ""review_id"": <integer>,
-  ""status_id"": <integer>,
-  ""type_id"": <integer>
+  "comment": "<string>",
+  "name": "<string>",
+  "node_id": <integer>,
+  "priority": "<string>",
+  "responsible_id": <integer>,
+  "review_id": <integer>,
+  "status_id": <integer>,
+  "type_id": <integer>
 }'```"
 "# Method delete ticket status id
 ### Delete ticket
@@ -4628,12 +4628,12 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/ticket_statuse
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""ok"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "ok",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -4659,26 +4659,26 @@ curl --location --request DELETE 'https://api.voicer.software/api/v1/ticket_stat
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""TicketType domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""company_id"": {
-      ""type"": ""integer""
+  "description": "TicketType domain model",
+  "type": "object",
+  "properties": {
+    "company_id": {
+      "type": "integer"
     },
-    ""created_at"": {
-      ""type"": ""string""
+    "created_at": {
+      "type": "string"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""img"": {
-      ""type"": ""string""
+    "img": {
+      "type": "string"
     },
-    ""name"": {
-      ""type"": ""string""
+    "name": {
+      "type": "string"
     },
-    ""updated_at"": {
-      ""type"": ""string""
+    "updated_at": {
+      "type": "string"
     }
   }
 }
@@ -4704,25 +4704,25 @@ curl --location --request GET 'https://api.voicer.software/api/v1/ticket_types/{
 ## Request body
 ```json
 {
-  ""comment"": ""<string>"",
-  ""name"": ""<string>"",
-  ""node_id"": <integer>,
-  ""priority"": <domain.PriorityType>,
-  ""responsible_id"": <integer>,
-  ""review_id"": <integer>,
-  ""status_id"": <integer>,
-  ""type_id"": <integer>
+  "comment": "<string>",
+  "name": "<string>",
+  "node_id": <integer>,
+  "priority": <domain.PriorityType>,
+  "responsible_id": <integer>,
+  "review_id": <integer>,
+  "status_id": <integer>,
+  "type_id": <integer>
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""ok"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "ok",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -4733,14 +4733,14 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/ticket_types/{
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer Token' \
 --data-raw '{
-   ""comment"": ""<string>"",
-   ""name"": ""<string>"",
-   ""node_id"": <integer>,
-   ""priority"": <domain.PriorityType>,
-   ""responsible_id"": <integer>,
-   ""review_id"": <integer>,
-   ""status_id"": <integer>,
-   ""type_id"": <integer>
+   "comment": "<string>",
+   "name": "<string>",
+   "node_id": <integer>,
+   "priority": <domain.PriorityType>,
+   "responsible_id": <integer>,
+   "review_id": <integer>,
+   "status_id": <integer>,
+   "type_id": <integer>
 }'
 ```
 Replace `{id}`, `<string>`, and `<integer>` with the actual values for your request."
@@ -4759,12 +4759,12 @@ Replace `{id}`, `<string>`, and `<integer>` with the actual values for your requ
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""ok"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "ok",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -4791,47 +4791,47 @@ Please note that you need to replace `{id}` with the actual value of the ticket 
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Ticket domain model"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""comment"": {
-      ""type"": ""string""
+  "description": "Ticket domain model",
+  "type": "object",
+  "properties": {
+    "comment": {
+      "type": "string"
     },
-    ""company_id"": {
-      ""type"": ""integer""
+    "company_id": {
+      "type": "integer"
     },
-    ""created_at"": {
-      ""type"": ""string""
+    "created_at": {
+      "type": "string"
     },
-    ""id"": {
-      ""type"": ""integer""
+    "id": {
+      "type": "integer"
     },
-    ""name"": {
-      ""type"": ""string""
+    "name": {
+      "type": "string"
     },
-    ""node_id"": {
-      ""type"": ""integer""
+    "node_id": {
+      "type": "integer"
     },
-    ""priority"": {
-      ""$ref"": ""#/definitions/domain.PriorityType""
+    "priority": {
+      "$ref": "#/definitions/domain.PriorityType"
     },
-    ""responsible_id"": {
-      ""type"": ""integer""
+    "responsible_id": {
+      "type": "integer"
     },
-    ""review_id"": {
-      ""type"": ""integer""
+    "review_id": {
+      "type": "integer"
     },
-    ""status_id"": {
-      ""type"": ""integer""
+    "status_id": {
+      "type": "integer"
     },
-    ""type_id"": {
-      ""type"": ""integer""
+    "type_id": {
+      "type": "integer"
     },
-    ""updated_at"": {
-      ""type"": ""string""
+    "updated_at": {
+      "type": "string"
     },
-    ""user_id"": {
-      ""type"": ""integer""
+    "user_id": {
+      "type": "integer"
     }
   }
 }
@@ -4855,25 +4855,25 @@ curl --location --request GET 'https://api.voicer.software/api/v1/tickets/{id}' 
 ## Request body
 ```json
 {
-  ""comment"": ""<string>"",
-  ""name"": ""<string>"",
-  ""node_id"": <integer>,
-  ""priority"": ""<domain.PriorityType>"",
-  ""responsible_id"": <integer>,
-  ""review_id"": <integer>,
-  ""status_id"": <integer>,
-  ""type_id"": <integer>
+  "comment": "<string>",
+  "name": "<string>",
+  "node_id": <integer>,
+  "priority": "<domain.PriorityType>",
+  "responsible_id": <integer>,
+  "review_id": <integer>,
+  "status_id": <integer>,
+  "type_id": <integer>
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""ok"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "ok",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -4885,14 +4885,14 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/tickets/{id}' 
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token' \
 --data-raw '{
-  ""comment"": ""<string>"",
-  ""name"": ""<string>"",
-  ""node_id"": <integer>,
-  ""priority"": ""<domain.PriorityType>"",
-  ""responsible_id"": <integer>,
-  ""review_id"": <integer>,
-  ""status_id"": <integer>,
-  ""type_id"": <integer>
+  "comment": "<string>",
+  "name": "<string>",
+  "node_id": <integer>,
+  "priority": "<domain.PriorityType>",
+  "responsible_id": <integer>,
+  "review_id": <integer>,
+  "status_id": <integer>,
+  "type_id": <integer>
 }'```"
 Error: Could not get a response from the API.
 "## Method List user contacts
@@ -4913,34 +4913,34 @@ Query params can be used to find a specific subset of contacts.
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""user contacts list"",
-  ""type"": ""array"",
-  ""items"": {
-    ""type"": ""object"",
-    ""properties"": {
-      ""active"": {
-        ""type"": ""boolean""
+  "description": "user contacts list",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "active": {
+        "type": "boolean"
       },
-      ""createdAt"": {
-        ""type"": ""string""
+      "createdAt": {
+        "type": "string"
       },
-      ""email"": {
-        ""type"": ""string""
+      "email": {
+        "type": "string"
       },
-      ""id"": {
-        ""type"": ""integer""
+      "id": {
+        "type": "integer"
       },
-      ""telegramID"": {
-        ""type"": ""string""
+      "telegramID": {
+        "type": "string"
       },
-      ""updatedAt"": {
-        ""type"": ""string""
+      "updatedAt": {
+        "type": "string"
       },
-      ""userID"": {
-        ""type"": ""integer""
+      "userID": {
+        "type": "integer"
       },
-      ""viberID"": {
-        ""type"": ""string""
+      "viberID": {
+        "type": "string"
       }
     }
   }
@@ -4965,11 +4965,11 @@ Replace `<user_email>` with the email of the user you want to search for contact
 ## Request body
 ```json
 {
-  ""contact"": {
-        ""chatID"": ""<string>"",
-        ""payload"": ""<string>"",
-        ""type"": ""<string>"",
-        ""userID"": <integer> 
+  "contact": {
+        "chatID": "<string>",
+        "payload": "<string>",
+        "type": "<string>",
+        "userID": <integer> 
   }
 }
 ```
@@ -4986,11 +4986,11 @@ curl--location --request POST 'https://api.voicer.software/api/v1/user_contacts'
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token' \
 --data-raw '{
-    ""contact"": {
-        ""chatID"": ""<string>"",
-        ""payload"": ""<string>"",
-        ""type"": ""<string>"",
-        ""userID"": <integer>
+    "contact": {
+        "chatID": "<string>",
+        "payload": "<string>",
+        "type": "<string>",
+        "userID": <integer>
     }
 }'```"
 "# Method update user contact
@@ -5008,23 +5008,23 @@ curl--location --request POST 'https://api.voicer.software/api/v1/user_contacts'
 ## Request body
 ```json
 {
-  ""active"": {
-    ""type"": ""boolean""
+  "active": {
+    "type": "boolean"
   },
-  ""email"": {
-    ""type"": ""string""
+  "email": {
+    "type": "string"
   }
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Success"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "Success",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -5036,8 +5036,8 @@ curl --location --request PUT [url: https://api.voicer.software/api/v1/user_cont
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token` \
 --data-raw '{
-  ""active"": true,
-  ""email"": ""<string>""
+  "active": true,
+  "email": "<string>"
 }'```"
 "# Method delete user contact by id
 ### Delete user contact
@@ -5054,12 +5054,12 @@ curl --location --request PUT [url: https://api.voicer.software/api/v1/user_cont
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Success"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "Success",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -5071,7 +5071,7 @@ curl --location --request DELETE '''https://api.voicer.software/api/v1/user_cont
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token''' \
 --data '''{
-  ""id"": <integer>
+  "id": <integer>
 }'''"
 Error: Could not get a response from the API.
 Error: Could not get a response from the API.
@@ -5086,9 +5086,9 @@ Error: Could not get a response from the API.
 ## Request body
 ```json
 {
-  ""deliveryAt"": ""<string>"",
-  ""message"": ""<string>"",
-  ""userID"": <integer>
+  "deliveryAt": "<string>",
+  "message": "<string>",
+  "userID": <integer>
 }
 ```
 ## Response body (code 200)
@@ -5102,9 +5102,9 @@ curl --location --request POST '''https://api.voicer.software/api/v1/user_notifi
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token''' \
 --data '''{
-  ""deliveryAt"": ""<string>"",
-  ""message"": ""<string>"",
-  ""userID"": <integer>
+  "deliveryAt": "<string>",
+  "message": "<string>",
+  "userID": <integer>
 }'''
 ```"
 Error: Could not get a response from the API.
@@ -5130,16 +5130,16 @@ Error: Could not get a response from the API.
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""Users list"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""count"": {
-      ""type"": ""integer""
+  "description": "Users list",
+  "type": "object",
+  "properties": {
+    "count": {
+      "type": "integer"
     },
-    ""data"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""$ref"": ""#/definitions/domain.User""
+    "data": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/domain.User"
       }
     }
   }
@@ -5167,21 +5167,21 @@ Error: Could not get a response from the API.
 ## Request body
 ```json
 {
-  ""email"": ""string"",
-  ""name"": ""string"",
-  ""password"": ""string"",
-  ""passwordConfirmation"": ""string""
+  "email": "string",
+  "name": "string",
+  "password": "string",
+  "passwordConfirmation": "string"
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""User updated"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "User updated",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -5189,16 +5189,16 @@ Error: Could not get a response from the API.
 ## CURL Requests
 ```code
 curl -X PUT \
-     -H ""Content-Type: application/json"" \
-     -H ""Accept: application/json"" \
-     -H ""Authorization: Bearer Token"" \
+     -H "Content-Type: application/json" \
+     -H "Accept: application/json" \
+     -H "Authorization: Bearer Token" \
      -d '{
-       ""email"": ""<string>"",
-       ""name"": ""<string>"",
-       ""password"": ""<string>"",
-       ""passwordConfirmation"": ""<string>""
+       "email": "<string>",
+       "name": "<string>",
+       "password": "<string>",
+       "passwordConfirmation": "<string>"
      }' \
-     ""https://api.voicer.software/api/v1/users/{id}""
+     "https://api.voicer.software/api/v1/users/{id}"
 ```"
 "# Method DELETE user id
 ### Delete user
@@ -5215,12 +5215,12 @@ curl -X PUT \
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""User deleted"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "User deleted",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -5250,8 +5250,8 @@ Error: Could not get a response from the API.
 ## Request body
 ```json
 {
-  ""notifyTimeBegin"": ""<HH:MM:SS>"",
-  ""notifyTimeEnd"": ""<HH:MM:SS>""
+  "notifyTimeBegin": "<HH:MM:SS>",
+  "notifyTimeEnd": "<HH:MM:SS>"
 }
 ```
 ## Response body (code 200)
@@ -5267,8 +5267,8 @@ curl --location --request POST '''https://api.voicer.software/api/v1/users/{user
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token''' \
 --data '''{
-  ""notifyTimeBegin"": ""<HH:MM:SS>"",
-  ""notifyTimeEnd"": ""<HH:MM:SS>""
+  "notifyTimeBegin": "<HH:MM:SS>",
+  "notifyTimeEnd": "<HH:MM:SS>"
 }''' 
 ```"
 "# Method delete Detach Notifiable Source from User
@@ -5287,12 +5287,12 @@ curl --location --request POST '''https://api.voicer.software/api/v1/users/{user
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""OK"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "OK",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -5318,29 +5318,29 @@ curl --location --request DELETE 'https://api.voicer.software/api/v1/users/{user
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""User settings"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""location"": {
-      ""type"": ""string""
+  "description": "User settings",
+  "type": "object",
+  "properties": {
+    "location": {
+      "type": "string"
     },
-    ""notifyTimeBegin"": {
-      ""type"": ""string""
+    "notifyTimeBegin": {
+      "type": "string"
     },
-    ""notifyTimeEnd"": {
-      ""type"": ""string""
+    "notifyTimeEnd": {
+      "type": "string"
     },
-    ""updatedAt"": {
-      ""type"": ""string""
+    "updatedAt": {
+      "type": "string"
     },
-    ""userID"": {
-      ""type"": ""integer""
+    "userID": {
+      "type": "integer"
     },
-    ""workTimeBegin"": {
-      ""type"": ""string""
+    "workTimeBegin": {
+      "type": "string"
     },
-    ""workTimeEnd"": {
-      ""type"": ""string""
+    "workTimeEnd": {
+      "type": "string"
     }
   }
 }
@@ -5367,26 +5367,26 @@ curl --location --request GET '''https://api.voicer.software/api/v1/users/{user_
 ## Request body
 ```json
 {
-  ""description"": ""update data"",
-  ""name"": ""data"",
-  ""in"": ""body"",
-  ""required"": true,
-  ""type"": ""object"",
-  ""properties"": {
-    ""location"": {
-      ""type"": ""string""
+  "description": "update data",
+  "name": "data",
+  "in": "body",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "location": {
+      "type": "string"
     },
-    ""notifyTimeBegin"": {
-      ""type"": ""string""
+    "notifyTimeBegin": {
+      "type": "string"
     },
-    ""notifyTimeEnd"": {
-      ""type"": ""string""
+    "notifyTimeEnd": {
+      "type": "string"
     },
-    ""workTimeBegin"": {
-      ""type"": ""string""
+    "workTimeBegin": {
+      "type": "string"
     },
-    ""workTimeEnd"": {
-      ""type"": ""string""
+    "workTimeEnd": {
+      "type": "string"
     }
   }
 }
@@ -5394,12 +5394,12 @@ curl --location --request GET '''https://api.voicer.software/api/v1/users/{user_
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""User settings updated"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "User settings updated",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -5411,11 +5411,11 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/users/{id}/set
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token' \
 --data-raw '{
-    ""location"": ""<string>"",
-    ""notifyTimeBegin"": ""<string>"",
-    ""notifyTimeEnd"": ""<string>"",
-    ""workTimeBegin"": ""<string>"",
-    ""workTimeEnd"": ""<string>""
+    "location": "<string>",
+    "notifyTimeBegin": "<string>",
+    "notifyTimeEnd": "<string>",
+    "workTimeBegin": "<string>",
+    "workTimeEnd": "<string>"
 }'```"
 "# Method Send Viber without timezone
 ### Send Viber message without specifying a timezone
@@ -5428,21 +5428,21 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/users/{id}/set
 ## Request body
 ```json
 {
-  ""message"": {
-    ""data"": ""<string>"",
-    ""phone"": ""<string>""
+  "message": {
+    "data": "<string>",
+    "phone": "<string>"
   }
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""OK"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "OK",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -5454,8 +5454,8 @@ curl --location --request POST 'https://api.voicer.software/api/v1/viber' \
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token` \
 --data-raw '{
-  ""data"": ""<string>"",
-  ""phone"": ""<string>""
+  "data": "<string>",
+  "phone": "<string>"
 }'```"
 "# Method Send Viber to many
 ### Send Viber to many
@@ -5468,21 +5468,21 @@ curl --location --request POST 'https://api.voicer.software/api/v1/viber' \
 ## Request body
 ```json
 {
-  ""message"": {
-    ""data"": ""<string>"",
-    ""phones"": [""<string>"", ""<string>"", ...]
+  "message": {
+    "data": "<string>",
+    "phones": ["<string>", "<string>", ...]
   }
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""OK"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""message"": {
-      ""type"": ""string"",
-      ""example"": ""OK""
+  "description": "OK",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "OK"
     }
   }
 }
@@ -5494,9 +5494,9 @@ curl --location --request POST '''https://api.voicer.software/api/v1/viber/bulk'
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token` \
 --data '''{
-  ""message"": {
-    ""data"": ""<string>"",
-    ""phones"": [""<string>"", ""<string>"", ...]
+  "message": {
+    "data": "<string>",
+    "phones": ["<string>", "<string>", ...]
   }
 }'''"
 "# Method GET user view
@@ -5514,19 +5514,19 @@ curl --location --request POST '''https://api.voicer.software/api/v1/viber/bulk'
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""result"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""danglingNodes"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""type"": ""integer""
+  "description": "result",
+  "type": "object",
+  "properties": {
+    "danglingNodes": {
+      "type": "array",
+      "items": {
+        "type": "integer"
       }
     },
-    ""structures"": {
-      ""type"": ""array"",
-      ""items"": {
-        ""$ref"": ""#/definitions/dtos.ViewStructure""
+    "structures": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/dtos.ViewStructure"
       }
     }
   }
@@ -5554,30 +5554,30 @@ curl --location --request GET '''https://api.voicer.software/api/v1/view/user/{i
 ## Request body
 ```json
 {
-  ""attachCompanyIDs"": [1, 2, 3],
-  ""attachNodeIDs"": [4, 5, 6],
-  ""detachCompanyIDs"": [7, 8, 9],
-  ""detachNodeIDs"": [10, 11, 12],
-  ""updateType"": ""domain.ViewUpdateType""
+  "attachCompanyIDs": [1, 2, 3],
+  "attachNodeIDs": [4, 5, 6],
+  "detachCompanyIDs": [7, 8, 9],
+  "detachNodeIDs": [10, 11, 12],
+  "updateType": "domain.ViewUpdateType"
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""result"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""companiesAttached"": {
-      ""type"": ""integer""
+  "description": "result",
+  "type": "object",
+  "properties": {
+    "companiesAttached": {
+      "type": "integer"
     },
-    ""companiesDetached"": {
-      ""type"": ""integer""
+    "companiesDetached": {
+      "type": "integer"
     },
-    ""nodesAttached"": {
-      ""type"": ""integer""
+    "nodesAttached": {
+      "type": "integer"
     },
-    ""nodesDetached"": {
-      ""type"": ""integer""
+    "nodesDetached": {
+      "type": "integer"
     }
   }
 }
@@ -5589,11 +5589,11 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/view/user/{i
 --header '''Accept: application/json''' \
 --header '''Authorization: Bearer Token''' \
 --data '''{
-  ""attachCompanyIDs"": [1, 2, 3],
-  ""attachNodeIDs"": [4, 5, 6],
-  ""detachCompanyIDs"": [7, 8, 9],
-  ""detachNodeIDs"": [10, 11, 12],
-  ""updateType"": ""domain.ViewUpdateType""
+  "attachCompanyIDs": [1, 2, 3],
+  "attachNodeIDs": [4, 5, 6],
+  "detachCompanyIDs": [7, 8, 9],
+  "detachNodeIDs": [10, 11, 12],
+  "updateType": "domain.ViewUpdateType"
 }'''
 ```"
 "# Method Attach companies and nodes to user id
@@ -5615,23 +5615,23 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/view/user/{i
 ## Request body
 ```json
 {
-  ""view"": {
-    ""companyID"": <integer>,
-    ""nodeIDs"": [<array of integers>]
+  "view": {
+    "companyID": <integer>,
+    "nodeIDs": [<array of integers>]
   }
 }
 ```
 ## Response body (code 200)
 ```json
 {
-  ""description"": ""result"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""companiesAttached"": {
-      ""type"": ""integer""
+  "description": "result",
+  "type": "object",
+  "properties": {
+    "companiesAttached": {
+      "type": "integer"
     },
-    ""nodesAttached"": {
-      ""type"": ""integer""
+    "nodesAttached": {
+      "type": "integer"
     }
   }
 }
@@ -5643,8 +5643,8 @@ curl --location --request POST 'https://api.voicer.software/api/v1/view/user/{id
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token' \
 --data-raw '{
-  ""view"": {
-    ""companyID"": <integer>,
-    ""nodeIDs"": [<array of integers>]
+  "view": {
+    "companyID": <integer>,
+    "nodeIDs": [<array of integers>]
   }
 }'```
