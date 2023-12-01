@@ -48,7 +48,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/auth/password
 --data '{
   "email": "<string>",
   "languageCode": "<string>"
-}'```
+}```
 # Method Reset Password
 ### Reset password
 ## HTTP request
@@ -89,7 +89,7 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/auth/password-
 --data-raw '{
     "password": "<string>",
     "passwordConfirmation": "<string>"
-}'```
+}```
 # Method Register new user
 ### Register new user
 ## HTTP request
@@ -309,7 +309,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/reviews/{id}/
         "close": <boolean>,
         "text": "<string>"
     }
-}'```
+}```
 Please replace `{id}` with the actual value of the review ID you want to send a message to."
 # Method get full chat history by review ID
 ### Get full chat history by clientID
@@ -401,7 +401,7 @@ curl --location --request GET 'https://api.voicer.software/api/v1/companies/{com
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer Token' \
---path-variable 'company_id:<integer>'```
+--path-variable 'company_id:<integer>```
 # Method List chat templates for a company
 ### List chat templates for a company
 ## HTTP request
@@ -479,7 +479,7 @@ curl --location --request POST '''https://api.voicer.software/api/v1/companies/{
 --header '''Authorization: Bearer Token``` --data '''{
   "content": "<string>",
   "key": "<string>"
-}'''```
+}''```
 Error: Could not get a response from the API.
 Error: Could not get a response from the API.
 # Method store form client
@@ -547,7 +547,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/client' \
     }
   ],
   "status": <integer>
-}'```
+}```
 # Method get form field
 ### Show form field
 ## HTTP request
@@ -622,7 +622,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/client' \
 ## CURL Requests
 ```code
 curl --location --request GET 'https//api.voicer.software/api/v1/client/forms/{form_id}/fields/{field_id}' \
---header 'Authorization: Bearer Token`'```
+--header 'Authorization: Bearer Token````
 # Method get client form by slug
 ### Show form
 ## HTTP request
@@ -715,7 +715,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/companies' \
     "name": "<string>",
     "enableOverdue": <boolean>
   }
-}'```
+}```
 # Method get company info by id
 ### Show company
 ## HTTP request
@@ -851,7 +851,7 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/companies/{i
 ```code
 curl --location --request DELETE '''https://api.voicer.software/api/v1/companies/{id}''' \
 --header '''Authorization: Bearer Token`''' \
---header '''Accept: application/json'''```
+--header '''Accept: application/json''```
 # Method GET List all users attached to a company
 ### List all users attached to a company
 ## HTTP request
@@ -1033,7 +1033,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/contacts' \
     "viberID": "<string>",
     "whatsappID": "<string>"
   }
-}'```
+}```
 # Method Store chat in cache
 ### Store chat in cache
 ## HTTP request
@@ -1073,7 +1073,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/contacts/chat
   "chatID": "<string>",
   "type": "<string>",
   "uid": "<string>"
-}'```
+}```
 # Method get Contact info by id
 ### Show contact
 ## HTTP request
@@ -1130,7 +1130,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/contacts/chat
 curl --location --request GET 'https://api.voicer.software/api/v1/contacts/{id}' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
---header 'Authorization: Bearer Token'```
+--header 'Authorization: Bearer Token```
 
 Please note that you need to replace `{id}` with the actual ID value of the contact you want to retrieve."
 # Method Update contact
@@ -1180,7 +1180,7 @@ curl--location --request PUT 'https://api.voicer.software/api/v1/contacts/{id}' 
   "telegramID": "<string>",
   "viberID": "<string>",
   "whatsappID": "<string>"
-}'```
+}```
 Error: Could not get a response from the API.
 # Method get all contacts by review id
 ### List all contacts
@@ -1306,7 +1306,7 @@ curl --location --request GET 'https://api.voicer.software/api/v1/counts/review'
     "statuses": [array_of_client_statuses],
     "from": "from_date_in_RFC3339_format",
     "to": "to_date_in_RFC3339_format"
-}'```
+}```
 Replace `[array_of_company_ids]`, `[array_of_node_ids]`, `[array_of_source_ids]`, `[array_of_client_statuses]`, `from_date_in_RFC3339_format`, and `to_date_in_RFC3339_format` with the actual values you want to use."
 Error: Could not get a response from the API.
 # Method List all documents
@@ -1426,7 +1426,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/documents' \
   "file_id": <integer>,
   "name": "<string>",
   "url": "<string>"
-}'```
+}```
 # Method get document by id
 ### Show document
 ## HTTP request
@@ -1528,7 +1528,7 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/documents/{i
   "description": "<string>",
   "name": "<string>",
   "url": "<string>"
-}'''```
+}''```
 # Method delete document id
 ### Delete document
 ## HTTP request
@@ -1559,7 +1559,7 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/documents/{i
 curl --location --request DELETE '''https://api.voicer.software/api/v1/documents/{id}''' \
 --header '''Content-Type: application/json''' \
 --header '''Accept: application/json''' \
---header '''Authorization: Bearer Token'''```
+--header '''Authorization: Bearer Token''```
 # Method GET email templates
 ### List email-templates
 ## HTTP request
@@ -1614,7 +1614,7 @@ curl --location --request DELETE '''https://api.voicer.software/api/v1/documents
 ## CURL Requests
 ```code
 curl --location --request GET '''https://api.voicer.software/api/v1/email-templates?limit=<integer>&offset=<integer>''' \
---header '''Authorization: Bearer Token'''```
+--header '''Authorization: Bearer Token''```
 # Method create new email-template
 ### Create new email-template
 ## HTTP request
@@ -1654,7 +1654,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/email-templat
     "name": "<string>",
     "subject": "<string>",
     "variables": ["<string1>", "<string2>"]
-}'```
+}```
 # Method find EmailTemplate by ID
 ### Find email-template by id
 ## HTTP request
@@ -1751,7 +1751,7 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/email-template
   "name": "<string>",
   "subject": "<string>",
   "variables": ["<string>", "<string>"]
-}'```
+}```
 # Method Delete Email Template by ID
 ### Delete email-template
 ## HTTP request
@@ -1782,7 +1782,7 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/email-template
 curl --location --request DELETE '''https://api.voicer.software/api/v1/email-templates/{id}''' \
 --header '''Content-Type: application/json''' \
 --header '''Accept: application/json''' \
---header '''Authorization: Bearer Token'''```
+--header '''Authorization: Bearer Token''```
 # Method get forms for company
 ### Show forms for company
 ## HTTP request
@@ -2024,7 +2024,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/forms' \
       }
     ]
   }
-}'```
+}```
 # Method get Form id
 ### Show form
 ## HTTP request
@@ -2115,7 +2115,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/forms/{id}''
 {
   "id": <integer>
 }
-'''```
+''```
 # Method Update form
 ### Update form
 ### HTTP request
@@ -2214,7 +2214,7 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/forms/{id}' \
 curl --location --request DELETE '''https://api.voicer.software/api/v1/forms/{id}''' \
 --header '''Content-Type: application/json''' \
 --header '''Accept: application/json''' \
---header '''Authorization: Bearer Token'''```
+--header '''Authorization: Bearer Token''```
 Error: Could not get a response from the API.
 # Method Store form_field
 ### Store form_field
@@ -2509,7 +2509,7 @@ Replace `Token` with the actual bearer token value and `{id}` with the actual ID
 curl --location --request DELETE '''https://api.voicer.software/api/v1/form_fields/{id}''' \
 --header '''Content-Type: application/json''' \
 --header '''Accept: application/json''' \
---header '''Authorization: Bearer Token'''```
+--header '''Authorization: Bearer Token''```
 # Method get fields for form id
 ### Show fields for form
 ## HTTP request
@@ -2637,7 +2637,7 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/groups/{id}' \
 --header 'Authorization: Bearer Token' \
 --data-raw '{
   "name": "<string>"
-}'```
+}```
 # Method delete group
 ### Delete group
 ## HTTP request
@@ -2740,7 +2740,7 @@ curl --location --request POST '''https://api.voicer.software/api/v1/groups/{id}
 curl --location --request DELETE 'https://api.voicer.software/api/v1/groups/{id}/nodes/{node_id}' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
---header 'Authorization: Bearer Token'```
+--header 'Authorization: Bearer Token```
 Error: Could not get a response from the API.
 # Method Remove user from group
 ### Remove user from group
@@ -2773,7 +2773,7 @@ Error: Could not get a response from the API.
 curl --location --request DELETE '''https://api.voicer.software/api/v1/groups/{id}/users/{user_id}''' \
 --header '''Content-Type: application/json''' \
 --header '''Accept: application/json''' \
---header '''Authorization: Bearer Token'''```
+--header '''Authorization: Bearer Token''```
 # Method healthChecks
 ### healthChecks
 ## HTTP request
@@ -2800,7 +2800,7 @@ curl --location --request DELETE '''https://api.voicer.software/api/v1/groups/{i
 curl --location --request GET 'https://api.voicer.software/api/v1/health_checks' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
---header 'Authorization: Bearer Token'```
+--header 'Authorization: Bearer Token```
 # Method get languages
 ### List languages
 ## HTTP request
@@ -2832,7 +2832,7 @@ curl --location --request GET 'https://api.voicer.software/api/v1/health_checks'
 ## CURL Requests
 ```code
 curl --location --request GET 'https://api.voicer.software/api/v1/languages' \
---header 'Authorization: Bearer Token'```
+--header 'Authorization: Bearer Token```
 Error: Could not get a response from the API.
 # Method delete language
 ### Delete language
@@ -2869,7 +2869,7 @@ curl --location --request DELETE 'https://api.voicer.software/api/v1/languages' 
 --header 'Authorization: Bearer Token' \
 --data '{
     "name": "<string>"
-}'```
+}```
 # Method Create Metadata
 ### Create metadata
 ## HTTP request
@@ -2933,7 +2933,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/metadata/{ent
     "value": "<string>"
   },
   "entity": "<string>"
-}'```
+}```
 Replace `<string>` with the actual values and `<integer>` with the actual integer value."
 # Method get entity metadata by ID
 ### Show metadata
@@ -3245,7 +3245,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/nodes' \
     "sourceID": 0,
     "useDetectLanguage": true
   }
-}'```
+}```
 # Method get Node by id
 ### Show node
 ## HTTP request
@@ -3375,7 +3375,7 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/nodes/{id}''
   '''responsibleID''': '''<integer>''',
   '''sourceID''': '''<integer>''',
   '''useDetectLanguage''': '''<boolean>'''
-}'''```
+}''```
 # Method delete Node id
 ### Delete node
 ## HTTP request
@@ -3780,7 +3780,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/reviews' \
     "sources": [<integer>],
     "statuses": [<ClientStatus>],
     "to": "<string>"
-}'```
+}```
 Error: Could not get a response from the API.
 # Method get Review by id
 ### Show review
@@ -3930,7 +3930,7 @@ curl --location --request POST '''https://api.voicer.software/api/v1/sms/bulk'''
     "data": "<string>",
     "phones": ["<phone_number1>", "<phone_number2>"]
   }
-}'''```
+}''```
 # Method get sources by company id
 ### Get sources by company id
 ## HTTP request
@@ -3972,7 +3972,7 @@ curl --location --request POST '''https://api.voicer.software/api/v1/sms/bulk'''
 curl --location --request GET 'https://api.voicer.software/api/v1/companies/{company_id}/sources' \
 --header 'Authorization: Bearer Token' \
 --header 'Content-Type: application/json' \
---header 'Accept: application/json'```
+--header 'Accept: application/json```
 Please note that you need to replace `{company_id}` with the actual company ID that you want to retrieve sources for."
 # Method create Source
 ### Create source
@@ -4172,7 +4172,7 @@ curl --location --request PUT '''https://api.voicer.software/api/v1/sources/{id}
 curl --location --request DELETE 'https://api.voicer.software/api/v1/sources/{id}' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
---header 'Authorization: Bearer Token'```
+--header 'Authorization: Bearer Token```
 # Method get all ticket statuses for company id
 ### List all companies
 ## HTTP request
@@ -4220,7 +4220,7 @@ curl --location --request GET '''https://api.voicer.software/api/v1/companies/{i
 --header '''Authorization: Bearer Token''' \
 --data '''{
   "id": <integer>
-}'''```
+}''```
 # Method create ticket
 ### Create ticket
 ## HTTP request
@@ -4293,7 +4293,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/companies/{id
     "status_id": 0,
     "type_id": 0
   }
-}'```
+}```
 # Method get companies ticket types
 ### List all companies
 ## HTTP request
@@ -4509,7 +4509,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/companies/{id
     "type_id": <integer>
   },
   "id": <integer>
-}'```
+}```
 Error: Could not get a response from the API.
 # Method get ticket status by id
 ### Show ticket
@@ -4612,7 +4612,7 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/ticket_statuse
   "review_id": <integer>,
   "status_id": <integer>,
   "type_id": <integer>
-}'```
+}```
 # Method delete ticket status id
 ### Delete ticket
 ## HTTP request
@@ -4643,7 +4643,7 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/ticket_statuse
 curl --location --request DELETE 'https://api.voicer.software/api/v1/ticket_statuses/{id}' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
---header 'Authorization: Bearer Token'```
+--header 'Authorization: Bearer Token```
 # Method get ticket type by id
 ### Show ticket
 ## HTTP request
@@ -4839,7 +4839,7 @@ Please note that you need to replace `{id}` with the actual value of the ticket 
 ## CURL Requests
 ```code
 curl --location --request GET 'https://api.voicer.software/api/v1/tickets/{id}' \
---header 'Authorization: Bearer Token`'```
+--header 'Authorization: Bearer Token````
 # Method Update Ticket
 ### Update ticket
 ## HTTP request
@@ -4893,7 +4893,7 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/tickets/{id}' 
   "review_id": <integer>,
   "status_id": <integer>,
   "type_id": <integer>
-}'```
+}```
 Error: Could not get a response from the API.
 ## Method List user contacts
 ### List user contacts.
@@ -4992,7 +4992,7 @@ curl--location --request POST 'https://api.voicer.software/api/v1/user_contacts'
         "type": "<string>",
         "userID": <integer>
     }
-}'```
+}```
 # Method update user contact
 ### Update user contact
 ## HTTP request
@@ -5038,7 +5038,7 @@ curl --location --request PUT [url: https://api.voicer.software/api/v1/user_cont
 --data-raw '{
   "active": true,
   "email": "<string>"
-}'```
+}```
 # Method delete user contact by id
 ### Delete user contact
 ## HTTP request
@@ -5150,7 +5150,7 @@ Error: Could not get a response from the API.
 curl --location --request GET 'https://api.voicer.software/api/v1/users?name=<name>&email=<email>&q=<search_text>&companyID=<company_id>&groupID=<group_id>&limit=<limit>&offset=<offset>' \
 --header 'Authorization: Bearer Token' \
 --header 'Content-Type: application/json' \
---header 'Accept: application/json'```
+--header 'Accept: application/json```
 Error: Could not get a response from the API.
 # Method Update User
 ### Update user
@@ -5302,7 +5302,7 @@ curl --location --request POST '''https://api.voicer.software/api/v1/users/{user
 curl --location --request DELETE 'https://api.voicer.software/api/v1/users/{user_id}/notifiable-sources/{source_id}' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
---header 'Authorization: Bearer Token'```
+--header 'Authorization: Bearer Token```
 # Method get user settings
 ### Show user settings for a specific user
 ## HTTP request
@@ -5416,7 +5416,7 @@ curl --location --request PUT 'https://api.voicer.software/api/v1/users/{id}/set
     "notifyTimeEnd": "<string>",
     "workTimeBegin": "<string>",
     "workTimeEnd": "<string>"
-}'```
+}```
 # Method Send Viber without timezone
 ### Send Viber message without specifying a timezone
 ## HTTP request
@@ -5456,7 +5456,7 @@ curl --location --request POST 'https://api.voicer.software/api/v1/viber' \
 --data-raw '{
   "data": "<string>",
   "phone": "<string>"
-}'```
+}```
 # Method Send Viber to many
 ### Send Viber to many
 ## HTTP request
@@ -5647,4 +5647,4 @@ curl --location --request POST 'https://api.voicer.software/api/v1/view/user/{id
     "companyID": <integer>,
     "nodeIDs": [<array of integers>]
   }
-}'```
+}```
